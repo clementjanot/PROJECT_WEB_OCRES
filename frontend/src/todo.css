@@ -1,0 +1,13 @@
+.todo-header {
+    text-align: center;
+    background-color: #1C4AA6;
+    color: black;
+  }
+
+  .todo-header h2 {
+    color: white;
+  }
+
+  .todo-header h3 {
+    color: white;
+  }

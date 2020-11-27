@@ -1,5 +1,13 @@
 # Projet de fin de semestre
 
+Clément Janot & Amandine Ziegler
+
+Trello : https://trello.com/web26241426 
+
+Sources : 
+https://reactheure.fr/creer-une-todo-list-en-react-js-fin-%F0%9F%8E%89/?cli_action=1606039549.47 
+https://medium.com/how-to-react/create-a-calendar-in-react-js-e48e43ab3a19 
+
 A lire impérativement avant de commencer quoi que ce soit, ce sont les règles que vous devrez appliquer tout au long du semestre:
 
 <p align="center">

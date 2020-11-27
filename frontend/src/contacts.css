@@ -1,0 +1,13 @@
+.contacts-header {
+    text-align: center;
+    background-color: #1C4AA6;
+    color: black;
+  }
+
+  .contacts-header h2 {
+    color: white;
+  }
+
+  .contacts-header h3 {
+    color: white;
+  }
