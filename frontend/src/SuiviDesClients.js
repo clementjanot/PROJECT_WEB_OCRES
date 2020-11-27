@@ -50,12 +50,12 @@ export default class Example extends PureComponent {
 
           <Row>
 
-            <Col>
+            <Col lg={3}>
               <h3>Hi {this.state.nomp},</h3>
               <p>Aujourd'hui ton entrprise à gagner {this.state.nouveauClient} nouveaux clients . </p>
             </Col>
 
-            <Col>
+            <Col lg={9}>
               <Intitule name={this.state.nomWidget}/>
               <AreaChart
               width={500}
@@ -74,10 +74,10 @@ export default class Example extends PureComponent {
             </Col>
 
           </Row>
-          
+
           <Row>
-            <Col>gezhs</Col>
-            <Col>ehdhe</Col>
+            <Col lg={6} md={6} sm={6} >gezhs</Col>
+            <Col lg={6} md={6} sm={6}>ehdhe</Col>
           </Row>
         </Container>
     );
