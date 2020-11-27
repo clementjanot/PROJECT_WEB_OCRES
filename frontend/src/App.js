@@ -9,6 +9,9 @@ import Col from 'react-bootstrap/Col';
 import ToDo from'./todo';
 import Calendrier from './calendrier';
 import Contacts from './contacts';
+import SuiviDesClient from './SuiviDesClients';
+import TTest1 from './CoursDesActions';
+import Intitule from './Intitule';
 
 function App() {
   return (
@@ -23,32 +26,15 @@ function App() {
           <Col>
             <Contacts/>
           </Col>
+          <Col>
+          <SuiviDesClient/>
+          </Col>
+          <Col>
+          <TTest1/>
+          </Col>
         </Row>
       </Container>
   )
 }
-
 export default App;
 
-/*
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-*/
