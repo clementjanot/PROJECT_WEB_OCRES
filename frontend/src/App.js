@@ -1,7 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import SuiviDesClient from './SuiviDesClients';
+import TTest1 from './CoursDesActions';
+import Intitule from './Intitule';
+/*
 function App() {
   return (
     <div className="App">
@@ -22,5 +25,19 @@ function App() {
     </div>
   );
 }
+
+export default App;*/
+
+function App() {
+  return (
+    <div className="App">
+      <SuiviDesClient/>
+      <div>
+        <TTest1/>
+      </div>
+    </div>
+  )
+}
+
 
 export default App;
