@@ -1,0 +1,10 @@
+.container{
+    background: rgba(242, 126, 157, 0.85);
+    border-radius: 50px;
+}
+.Description{
+    color: beige;
+}
+.t{
+    align-items: center;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './Circle-icons-contacts.svg.jpg';
+import logo from './images/contactsIcon.jpg';
 import './contacts.css';
 
 import Container from 'react-bootstrap/Container';
