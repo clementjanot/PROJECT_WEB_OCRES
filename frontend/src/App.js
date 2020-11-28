@@ -11,6 +11,7 @@ import Contacts from './components/contacts';
 import SuiviDesClient from './components/SuiviDesClients';
 import Actions from './components/CoursDesActions';
 import Intitule from './components/Intitule';
+import Budget from './components/Budget';
 
 function App() {
   return (
@@ -33,6 +34,11 @@ function App() {
           </Col>
           <Col>
           <ToDo/>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+          <Budget/>
           </Col>
         </Row>
         
