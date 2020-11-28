@@ -17,13 +17,12 @@ class Budget extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>
+            <div className="b">
+                
                     <Intitule name={this.state.nameWidget}/>
-                </div>
-                <div>
+                
                     <Camembert/>
-                </div>
+                
                 
             </div>
         )
