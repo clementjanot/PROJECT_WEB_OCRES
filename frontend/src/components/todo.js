@@ -1,5 +1,6 @@
 import React from 'react';
 import './todo.css';
+import Intitule from './Intitule';
 
 import {Input, InputGroup, Icon} from 'rsuite';
 
@@ -7,7 +8,7 @@ export default class todo extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            nomWidget:"To do",
         }
     }
 
@@ -16,7 +17,7 @@ export default class todo extends React.Component {
             <div className = "col-md-12">
                 
                 <header className = "todo-header">
-                    <h2>TO DO LIST</h2>
+                    <Intitule name={this.state.nomWidget}/>
                     <h3>Vos tâches à faire : </h3>
                     <h6>- maj des documents admin</h6>
                     <h6>- appeler le service informatique</h6>

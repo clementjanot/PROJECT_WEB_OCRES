@@ -1,13 +1,21 @@
 .contacts-header {
     text-align: center;
+    border-radius: 50px;
     background-color: #1C4AA6;
     color: black;
+    height: 380px;
+    width: 330px;
   }
 
-  .contacts-header h2 {
-    color: white;
-  }
-
-  .contacts-header h3 {
-    color: white;
-  }
+.App-logo {
+  height: 50px;
+}
+.contacts-header p {
+  font-size: 10px;
+}
+.contacts-header h3 {
+  font-size: 14px;
+}
+.hello {
+  width: 120px;
+}

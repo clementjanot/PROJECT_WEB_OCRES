@@ -49,17 +49,21 @@ export default class Example extends PureComponent {
         <Container >
 
           <Row className="t">
+            
+            <Row>
+              <Intitule name={this.state.nomWidget}/>
+            </Row>
 
-            <Col lg={3} md={3} sm={3} className="Description">
+            <Row>
+            <Col lg={2} md={2} sm={2} className="Description">
               <h4>Hi {this.state.nomp},</h4>
               <p>Aujourd'hui ton entrprise à gagner {this.state.nouveauClient} nouveaux clients . </p>
             </Col>
 
-            <Col lg={9} md={9} sm={9}>
-              <Intitule name={this.state.nomWidget}/>
+            <Col lg={10} md={10} sm={10}>
               <AreaChart
               width={500}
-              height={350}
+              height={150}
               data={data}
               margin={{
               top: 10, right: 30, left: 0, bottom: 0,
@@ -72,7 +76,8 @@ export default class Example extends PureComponent {
               <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
               </AreaChart>
             </Col>
-
+            </Row>
+            
           </Row>
         </Container>
     );

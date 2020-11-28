@@ -13,8 +13,7 @@ class CoursDesActions extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            nameWidget : "Cours des Actions",
-            nom : "Cours de l'action",
+            nameWidget : "Cours de l'Action",
             recap :"116,03",
             date : Moment().format('LLL')
         };
@@ -27,7 +26,6 @@ class CoursDesActions extends React.Component {
                     <Intitule name={this.state.nameWidget}/>
                 </div>
                 <div>
-                    <h4>{this.state.nom}</h4>
                     <h1>{this.state.recap}€</h1>
                     <p>{this.state.date}</p>
                 </div>

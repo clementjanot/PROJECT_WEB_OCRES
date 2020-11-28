@@ -1,13 +1,15 @@
 .todo-header {
     text-align: center;
+    border-radius: 50px;
     background-color: #1C4AA6;
-    color: black;
-  }
-
-  .todo-header h2 {
-    color: white;
+    height: 190px;
   }
 
   .todo-header h3 {
-    color: white;
+    font-size: 14px;
+    color: black;
+  }
+  .todo-header h6 {
+    font-size: 10px;
+    color: black;
   }

@@ -2,5 +2,15 @@
     background: rgba(242, 68, 114, 0.85);
     border-radius: 50px;
     text-align: center;
-    
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 200px;
   }
+
+.widget h1 {
+  font-size: 40px;
+}
+.widget p {
+  font-size: 12px;
+}

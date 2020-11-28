@@ -1,10 +1,18 @@
-.container{
-    background: rgba(242, 126, 157, 0.85);
-    border-radius: 50px;
-}
 .Description{
-    color: beige;
+    height: 50px;
+    font-size: 10px;
 }
 .t{
+    background: #F27E9D;
+    border-radius: 50px;
+    height: 190px;
+    width: 730px;
     align-items: center;
+}
+.Description h4 {
+    font-size: 14px;
+    text-align: center;
+}
+.Description p {
+    text-align: center;
 }
