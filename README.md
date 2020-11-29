@@ -16,3 +16,7 @@ Trello : https://trello.com/web26241426
 Sources : 
 - https://reactheure.fr/creer-une-todo-list-en-react-js-fin-%F0%9F%8E%89/?cli_action=1606039549.47 
 - https://medium.com/how-to-react/create-a-calendar-in-react-js-e48e43ab3a19 
+- https://git-scm.com/book/fr/v2/Les-branches-avec-Git-Branches-et-fusions%C2%A0%3A-les-bases
+- https://recharts.org/en-US/examples
+- https://fr.reactjs.org/
+- https://apexcharts.com/react-chart-demos/pie-charts/
