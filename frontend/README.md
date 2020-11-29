@@ -1,8 +1,9 @@
-#Frontend
+<b>#Frontend</b>
 
-A installer : npm i rsuite --save ;
-npm i react-calendar ;
-npm i react-boootstrap ;
+A installer : 
+- npm i rsuite --save ;
+- npm i react-calendar ;
+- npm i react-boootstrap ;
 
 Ce dossier contiendra la partie frontend de votre projet.
 
