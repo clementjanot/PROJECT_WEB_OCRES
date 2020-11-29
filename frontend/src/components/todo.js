@@ -2,6 +2,10 @@ import React from 'react';
 import './todo.css';
 import Intitule from './Intitule';
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import {Input, InputGroup, Icon} from 'rsuite';
 
 export default class todo extends React.Component {
@@ -18,28 +22,33 @@ export default class todo extends React.Component {
                 
                 <header className = "todo-header">
                     <Intitule name={this.state.nomWidget}/>
-                    <h3>Vos tâches à faire : </h3>
-                    <h6>- maj des documents admin</h6>
-                    <h6>- appeler le service informatique</h6>
-                    <h6>- finir le bon de commande n°4320</h6>
-                
-                    <div>
-                        <h3>Ajout de nouvelles tâches : </h3>
-                        <InputGroup inside>
-                            <Input placeholder={"Veuillez entrer une nouvelle tâche"} value={this.state.newTask} onChange={(val) => this.setState({newTask: val})}/>
-                            <InputGroup.Button><Icon icon="plus" onClick={() => alert(this.state.newTask)}/></InputGroup.Button>
-                        </InputGroup>
-                    </div>
+                    <Row>
+                        <Col className = "todo-test" lg={6} md={6} sm={6}>
+                            <h3>Vos tâches à faire : </h3>
+                            <p>- maj des documents admin</p>
+                            <p>- appeler le service informatique</p>
+                            <p>- finir le bon de commande n°4320</p>
+                        </Col>
 
-                    <div>
-                        <h3>Suppression d'une tâche : </h3>
-                        <InputGroup inside>
-                            <Input placeholder={"Veuillez entrer la tâche à supprimer"} value={this.state.newTask} onChange={(val) => this.setState({newTask: val})}/>
-                            <InputGroup.Button><Icon icon="plus" onClick={() => alert(this.state.newTask)}/></InputGroup.Button>
-                        </InputGroup>
-                    </div>
+                        <Col className = "todo-test" lg={6} md={6} sm={6}>
+                            <div>
+                                <h3>Ajout de nouvelles tâches : </h3>
+                                <InputGroup inside>
+                                    <Input className="hello" placeholder={"Veuillez entrer une nouvelle tâche"} value={this.state.newTask} onChange={(val) => this.setState({newTask: val})}/>
+                                    <InputGroup.Button><Icon icon="plus" onClick={() => alert(this.state.newTask)}/></InputGroup.Button>
+                                </InputGroup>
+                            </div>
+
+                            <div>
+                                <h3>Suppression d'une tâche : </h3>
+                                <InputGroup inside>
+                                    <Input className="hello" placeholder={"Veuillez entrer la tâche à supprimer"} value={this.state.newTask} onChange={(val) => this.setState({newTask: val})}/>
+                                    <InputGroup.Button><Icon icon="plus" onClick={() => alert(this.state.newTask)}/></InputGroup.Button>
+                                </InputGroup>
+                            </div>
+                        </Col>
+                    </Row>
                 </header>
-                
             </div>
         )
     }

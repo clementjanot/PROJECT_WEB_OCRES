@@ -3,13 +3,18 @@
     border-radius: 50px;
     background-color: #1C4AA6;
     height: 190px;
+    color: black;
   }
 
-  .todo-header h3 {
+  .todo-test h3 {
     font-size: 14px;
     color: black;
   }
-  .todo-header h6 {
+  .todo-header p {
     font-size: 10px;
     color: black;
+  }
+
+  .hello {
+    width: 120px;
   }

@@ -13,6 +13,7 @@ import Actions from './components/CoursDesActions';
 import Intitule from './components/Intitule';
 import Budget from './components/Budget';
 import Meeting from './components/meeting';
+import Explorer from './components/explorer';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Row className = "test">
 
           <Col lg={1} md={1} sm={1}>
-            <p>EXPLOREUR</p>
+            <Explorer/>
           </Col>
 
           <Col lg={7} md={7} sm={7}>

@@ -1,0 +1,26 @@
+.explorer-header {
+    border-radius: 50px;
+    background-color: #F29C50;
+    height: 570px;
+    width: 85px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.App-photo {
+    height: auto;
+    max-width: 100%;
+    width: 50px;
+    border-radius: 50px;
+  }
+.App-ok {
+  background-color: #4886D9;
+  height: auto;
+  max-width: 100%;
+  width: 50px;
+}
+.App-logo {
+    height: auto;
+    max-width: 100%;
+    width: 50px;
+  }

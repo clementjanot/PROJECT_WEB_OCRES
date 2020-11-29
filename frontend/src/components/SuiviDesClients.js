@@ -46,40 +46,33 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-        <Container >
-
-          <Row className="t">
+        <header className = "t">
+            <Intitule name={this.state.nomWidget}/>
             
-            <Row>
-              <Intitule name={this.state.nomWidget}/>
-            </Row>
+            <div className = "hello">
+              <div>
+                <h4>Hi {this.state.nomp},</h4>
+                <p>Aujourd'hui ton entrprise à gagner {this.state.nouveauClient} nouveaux clients . </p>
+              </div>
 
-            <Row>
-            <Col lg={2} md={2} sm={2} className="Description">
-              <h4>Hi {this.state.nomp},</h4>
-              <p>Aujourd'hui ton entrprise à gagner {this.state.nouveauClient} nouveaux clients . </p>
-            </Col>
-
-            <Col lg={10} md={10} sm={10}>
-              <AreaChart
-              width={500}
-              height={150}
-              data={data}
-              margin={{
-              top: 10, right: 30, left: 0, bottom: 0,
-              }}
-              >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
-              </AreaChart>
-            </Col>
-            </Row>
-            
-          </Row>
-        </Container>
+              <div>
+                <AreaChart
+                width={500}
+                height={150}
+                data={data}
+                margin={{
+                top: 10, right: 30, left: 0, bottom: 0,
+                }}
+                >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+                </AreaChart>
+              </div>
+            </div>
+        </header>
     );
   }
 }

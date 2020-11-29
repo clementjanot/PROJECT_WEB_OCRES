@@ -7,13 +7,18 @@
     width: 330px;
   }
 
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
 .App-logo {
   height: 50px;
 }
 .contacts-header p {
   font-size: 10px;
 }
-.contacts-header h3 {
+.r h3 {
   font-size: 14px;
 }
 .hello {

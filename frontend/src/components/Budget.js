@@ -19,10 +19,9 @@ class Budget extends React.Component {
         return (
             <div className="b">
                 
-                    <Intitule name={this.state.nameWidget}/>
+                <Intitule name={this.state.nameWidget}/>
                 
-                    <Camembert/>
-                
+                <Camembert/>
                 
             </div>
         )
