@@ -4,6 +4,10 @@ A installer :
 - npm i rsuite --save ;
 - npm i react-calendar ;
 - npm i react-boootstrap ;
+- npm install recharts ;
+- npm install apexcharts --save;
+- npm install react-apexcharts --save;
+- npm install moment --save;
 
 Ce dossier contiendra la partie frontend de votre projet.
 
