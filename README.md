@@ -1,4 +1,4 @@
-<b>Projet de fin de semestre</b>
+<h1><b>Projet de fin de semestre</b><h1/>
 
 Clément Janot & Amandine Ziegler
 
