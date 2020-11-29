@@ -1,0 +1,38 @@
+.fff input[type=text], select, [type=email], [type=tel]{
+ 
+    width: 100%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgba(242, 126, 157, 0.85);
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+}
+.fff input[type=text]:focus {
+    background-color: rgba(245, 190, 204, 0.85);
+  }
+
+
+.fff input[type=submit] {
+    width: 50%;
+    background-color:  rgba(242, 126, 157, 0.85);
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .fff input[type=submit]:hover {
+    background-color: rgba(221, 92, 126, 0.85);
+  }
+  .formulaire{
+      width: 500px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+
+  }
+  
