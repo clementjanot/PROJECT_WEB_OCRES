@@ -2,10 +2,10 @@ import React from 'react';
 import './explorer.css';
 import photo from './images/photoPerso.jpg';
 import dashboard from './images/iconDashboard.png';
-import fav from './images/iconFavoris.png';
-import drive from './images/iconDrive.png';
-import poubelle from './images/iconPoubelle.png';
-import cloud from './images/iconCloud.png';
+import task from './images/task.png';
+import folder from './images/folder.png';
+import wallet from './images/wallet.png';
+import help from './images/help.png';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -34,21 +34,21 @@ export default class meeting extends React.Component {
                         </Row>
                         <p><br></br></p>
                         <Row>
-                            <img src={fav} className="App-logo" alt="logo" />
+                            <img src={task} className="App-logo" alt="logo" />
                         </Row>
                         <p><br></br></p>
                         <Row>
-                            <img src={cloud} className="App-logo" alt="logo" />
+                            <img src={folder} className="App-logo" alt="logo" />
                         </Row>
                         <p><br></br></p>
                         <Row>
-                            <img src={drive} className="App-logo" alt="logo" />
+                            <img src={wallet} className="App-logo" alt="logo" />
                         </Row>
                         <p><br></br></p>
                         <Row>
-                            <img src={poubelle} className="App-logo" alt="logo" />
+                            <img src={help} className="App-logo" alt="logo" />
                         </Row>
-                        <p><br></br><br></br></p>
+                        <p><br></br></p>
                     </Container>
                     
                 </header>
