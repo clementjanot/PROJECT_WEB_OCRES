@@ -7,9 +7,9 @@ import Col from 'react-bootstrap/Col';
 
 import ToDo from'./components/todo';
 import Calendrier from './components/calendrier';
-import Contacts from './components/contacts';
+import Bénéficiaires from './components/bénéficiaires';
 import SuiviDesClient from './components/SuiviDesClients';
-import Actions from './components/CoursDesActions';
+import BudgetSemaine from './components/budgetSemaine';
 import Intitule from './components/Intitule';
 import Budget from './components/Budget';
 import Meeting from './components/meeting';
@@ -18,51 +18,49 @@ import Explorer from './components/explorer';
 function App() {
   return (
       <Container fluid>
-        <Row className = "test">
+        <Row className = "dimension">
+          <Row>
+            <Col lg={1} md={1} sm={1}>
+              <Explorer/>
+            </Col>
 
-          <Col lg={1} md={1} sm={1}>
-            <Explorer/>
-          </Col>
+            <Col lg={11} md={11} sm={11}>
+              <Row>
+                <Col lg={8} md={8} sm={8}>
+                  <SuiviDesClient/>
+                </Col>
 
-          <Col lg={7} md={7} sm={7}>
-            <Row>
-              < SuiviDesClient/>
-            </Row>
+                <Col lg={4} md={4} sm={4}>
+                  <BudgetSemaine/>
+                </Col>
+              </Row>
+              <Row>
+                <Col lg={4} md={4} sm={4}>
+                  <Bénéficiaires/>
+                </Col>
 
-            <Row>
+                <Col lg={4} md={4} sm={4}>
+                  <Row>
+                    <Calendrier/>
+                  </Row>
+                  <Row>
+                    <Budget/>
+                  </Row>
+                </Col>
 
-              <Col lg={6} md={6} sm={6}>
-                <Contacts/>
-              </Col>
+                <Col className = "conteneurs" lg={4} md={4} sm={4}>
+                  <Row>
+                    <Meeting/>
+                  </Row>
+                  <Row>
+                    <ToDo/>
+                  </Row>
+                </Col>
 
-              <Col lg={6} md={6} sm={6}>
-                <Row>
-                  <Calendrier/>
-                </Row>
-                <Row>
-                  <Budget/>
-                </Row>
-              </Col>
-
-            </Row>
-          </Col>
-
-          <Col lg={4} md={4} sm={4}>
-            <Row>
-              <Actions/>
-            </Row>
-
-            <Row className = "conteneurs">
-              <Meeting/>
-            </Row>
-
-            <Row className = "conteneurs">
-              <ToDo/>
-            </Row>
-          </Col>
-        
+              </Row>
+            </Col>
+          </Row>
         </Row>
-        
       </Container>
   )
 }

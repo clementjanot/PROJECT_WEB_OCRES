@@ -2,19 +2,19 @@
     text-align: center;
     border-radius: 50px;
     background-color: #1C4AA6;
-    height: 190px;
+    height: 185px;
     color: black;
   }
+.todo-header p {
+  font-size: 10px;
+  color: black;
+}
 
-  .todo-test h3 {
-    font-size: 14px;
-    color: black;
-  }
-  .todo-header p {
-    font-size: 10px;
-    color: black;
-  }
-
-  .hello {
-    width: 120px;
-  }
+.colonnes h3 {
+  font-size: 14px;
+  color: black;
+}
+  
+.box {
+  width: 120px;
+}
