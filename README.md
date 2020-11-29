@@ -1,4 +1,4 @@
-Projet de fin de semestre
+<b>Projet de fin de semestre</b>
 
 Clément Janot & Amandine Ziegler
 
@@ -9,6 +9,7 @@ Notre dashboard se compose d'un suivi des dépenses, d'une liste des bénéficai
 Problèmes rencontrés : 
 - Mise en commun des widgets que l'on a codé séparemment avec bootstrap et css. 
 - Adaptation du dashboard en fonction de l'écran PC, tablette, téléphone. 
+- Connecter le calendrier aux meeting et à la todo liste.
 
 Trello : https://trello.com/web26241426
 
