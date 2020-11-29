@@ -40,22 +40,23 @@ export default class Example extends PureComponent {
     this.state ={
       nomWidget:"Dépenses de la semaine",
       nomp: "Amandine",
-      nouveauClient :"134"
+      nouveauSolde :"948,55€"
     };
   }
 
   render() {
     return (
-        <header className = "t">
+      <div className = "col-md-12">
+        <header className = "header-client">
             <Intitule name={this.state.nomWidget}/>
             
-            <div className = "hello">
+            <div className = "div-client">
               <div>
-                <h4>Hi {this.state.nomp},</h4>
-                <p>Aujourd'hui ton entrprise à gagner {this.state.nouveauClient} nouveaux clients . </p>
+                <h4>Salut {this.state.nomp},</h4>
+                <p>Ton nouveau solde est de <b>{this.state.nouveauSolde}</b>. </p>
               </div>
 
-              <div>
+              <div className="graph">
                 <AreaChart
                 width={500}
                 height={150}
@@ -74,6 +75,7 @@ export default class Example extends PureComponent {
               </div>
             </div>
         </header>
+      </div>
     );
   }
 }

@@ -2,22 +2,53 @@
     height: 50px;
     font-size: 10px;
 }
-.t{
+.header-client {
     background: #F27E9D;
     border-radius: 50px;
-    height: 190px;
-    width: 730px;
     text-align: center;
 }
 
-.hello {
+.div-client {
     display: flex;
 }
-.hello h4 {
-    font-size: 14px;
+.div-client h4 {
+    font-size: 1em;
     text-align: center;
 }
-.hello p {
+.div-client p {
     text-align: center;
-    font-size: 10px;
+    font-size: 0.75em;
+}
+
+@media only screen and (min-width: 71.25em){
+    .header-client{
+        font-size: 100%;
+    }
+}
+@media only screen and (max-width: 60em){
+    .header-client{
+        font-size: 90%;
+        text-align: center;
+    }
+    .graph{
+        display: none;
+    }
+}
+@media only screen and (max-width: 45em){
+    .header-client{
+        font-size: 80%;
+        text-align: center;
+    }
+    .graph{
+        display: none;
+    }
+}
+@media only screen and (max-width: 33.75em){
+    .header-client{
+        font-size: 70%;
+        text-align: center;
+    }
+    .graph{
+        display: none;
+    }
 }

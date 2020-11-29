@@ -4,5 +4,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  height: 190px;
+}
+.semaine-header p {
+  font-size: 12px;
 }

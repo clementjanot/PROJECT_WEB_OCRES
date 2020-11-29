@@ -1,11 +1,6 @@
-.b{
-    width: 500px;
-    height: 500px;
+.budget-header {
     background-color: #F24472;
     border-radius: 50px;
-    height: 150px;
     text-align: center;
     color: black;
-    display: flex;
-    justify-content: center;
 }

@@ -2,19 +2,39 @@
     text-align: center;
     border-radius: 50px;
     background-color: #1C4AA6;
-    height: 185px;
     color: black;
   }
 .todo-header p {
-  font-size: 10px;
+  font-size: 0.75em;
   color: black;
 }
 
 .colonnes h3 {
-  font-size: 14px;
+  font-size: 1em;
   color: black;
 }
   
 .box {
   width: 120px;
+}
+
+@media only screen and (min-width: 71.25em){
+  .todo-header{
+      font-size: 100%;
+  }
+}
+@media only screen and (max-width: 60em){
+  .todo-header{
+      font-size: 90%;
+  }
+}
+@media only screen and (max-width: 45em){
+  .todo-header{
+      font-size: 80%;
+  }
+}
+@media only screen and (max-width: 33.75em){
+  .todo-header{
+      font-size: 70%;
+  }
 }

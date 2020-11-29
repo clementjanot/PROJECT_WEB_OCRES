@@ -10,7 +10,6 @@ import Calendrier from './components/calendrier';
 import Bénéficiaires from './components/bénéficiaires';
 import SuiviDesClient from './components/SuiviDesClients';
 import BudgetSemaine from './components/budgetSemaine';
-import Intitule from './components/Intitule';
 import Budget from './components/Budget';
 import Meeting from './components/meeting';
 import Explorer from './components/explorer';
@@ -20,26 +19,26 @@ function App() {
       <Container fluid>
         <Row className = "dimension">
           <Row>
-            <Col lg={1} md={1} sm={1}>
+            <Col lg={1} md={1} sm={1} xs={1} xl={1}>
               <Explorer/>
             </Col>
 
-            <Col lg={11} md={11} sm={11}>
+            <Col lg={11} md={11} sm={11} xs={11} xl={11}>
               <Row>
-                <Col lg={8} md={8} sm={8}>
+                <Col lg={8} md={8} sm={8} xs={8} xl={8}>
                   <SuiviDesClient/>
                 </Col>
 
-                <Col lg={4} md={4} sm={4}>
+                <Col lg={4} md={4} sm={4} xs={4} xl={4}>
                   <BudgetSemaine/>
                 </Col>
               </Row>
               <Row>
-                <Col lg={4} md={4} sm={4}>
+                <Col lg={4} md={4} sm={4} xs={4} xl={4}>
                   <Bénéficiaires/>
                 </Col>
 
-                <Col lg={4} md={4} sm={4}>
+                <Col lg={4} md={4} sm={4} xs={4} xl={4}>
                   <Row>
                     <Calendrier/>
                   </Row>
@@ -48,7 +47,7 @@ function App() {
                   </Row>
                 </Col>
 
-                <Col className = "conteneurs" lg={4} md={4} sm={4}>
+                <Col className = "conteneurs" lg={4} md={4} sm={4} xs={4} xl={4}>
                   <Row>
                     <Meeting/>
                   </Row>

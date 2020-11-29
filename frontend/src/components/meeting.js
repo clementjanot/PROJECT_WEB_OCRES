@@ -8,7 +8,7 @@ export default class meeting extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            nomWidget:"RDV du jour",
+            nomWidget:"RDV",
         }
     }
 

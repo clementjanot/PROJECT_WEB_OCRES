@@ -3,24 +3,39 @@
     border-radius: 50px;
     background-color: #1C4AA6;
     color: black;
-    height: 380px;
-    width: 330px;
   }
-
-.logo {
-  display: flex;
-  justify-content: center;
-}
-
-.App-logo {
-  height: 50px;
-}
 .contacts-header p {
-  font-size: 10px;
+  font-size: 0.75em;
 }
-.r h3 {
-  font-size: 14px;
+
+.colonne {
+  text-align: center;
 }
-.hello {
+.colonne2 h3 {
+  font-size: 1em;
+}
+
+.box {
   width: 120px;
+}
+
+@media only screen and (min-width: 71.25em){
+  .contacts-header{
+      font-size: 100%;
+  }
+}
+@media only screen and (max-width: 60em){
+  .contacts-header{
+      font-size: 90%;
+  }
+}
+@media only screen and (max-width: 45em){
+  .contacts-header{
+      font-size: 80%;
+  }
+}
+@media only screen and (max-width: 33.75em){
+  .contacts-header{
+      font-size: 70%;
+  }
 }

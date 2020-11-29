@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'
 
 import {Input, InputGroup, Icon} from 'rsuite';
 
-class CoursDesActions extends React.Component {
+class BudgetSemaine extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,11 +24,11 @@ class CoursDesActions extends React.Component {
                     <Intitule name={this.state.nameWidget}/>
                     <Row>
                         <Col lg={6} md={6} sm={6}>
-                            Vous vous étiez fixé un budget de <b>{this.state.montantInit}</b> pour cette semaine
+                            <p>Vous vous étiez fixé un budget de <b>{this.state.montantInit}</b> pour cette semaine.</p>
                         </Col>
 
                         <Col lg={6} md={6} sm={6}>
-                            Il vous reste <b>{this.state.montantRest}</b>
+                            <p>Il vous reste <b>{this.state.montantRest}</b>.</p>
                         </Col>
                     </Row>
                     
@@ -37,4 +37,4 @@ class CoursDesActions extends React.Component {
         )
     }
 }
-export default CoursDesActions;
+export default BudgetSemaine;

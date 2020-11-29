@@ -26,7 +26,11 @@ export default class todo extends React.Component {
                             <h3>Virement à effectuer : </h3>
                             <p>
                                 09/12 : Loyer, 850€
-                                <br></br>10/12 : SFR, 35€
+                                <br></br><Input type="submit" value="Supprimer"/>
+                            </p>
+                            <p> 
+                                10/12 : SFR, 35€
+                                <br></br><Input type="submit" value="Supprimer"/> 
                             </p>
                         </Col>
 
@@ -35,6 +39,7 @@ export default class todo extends React.Component {
                                 <h3>Ajout de nouvelles tâches : </h3>
                                 <InputGroup inside>
                                     <Input className="box" placeholder={"Nouvelle tâche"} value={this.state.newTask} onChange={(val) => this.setState({newTask: val})}/>
+                                    <br></br><Input type="submit" value="Ajouter"/> 
                                 </InputGroup>
                             </div>
                         </Col>
