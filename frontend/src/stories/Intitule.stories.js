@@ -1,12 +1,9 @@
-// src/components/Task.stories.js
+// intitule.js
 
 import React from 'react';
-
-import Task from './Intitule';
-
+import Titre from '../components/Intitule';
+    
 export default {
-  component: Task,
-  title: 'Task',
+    title : 'Title'
 };
-
-export const t = () => <Task/>;
+export const TITRE = () => <Titre primary>Titlle</Titre>;
