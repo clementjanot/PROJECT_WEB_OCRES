@@ -11,25 +11,25 @@ import Col from 'react-bootstrap/Col'
 
 const data = [
   {
-    name: 'Lundi', uv: 50, pv: 2400, amt: 2400,
+    name: 'Lun', euros: 25, pv: 2400, amt: 2400,
   },
   {
-    name: 'Mardi', uv: 25, pv: 1398, amt: 2210,
+    name: 'Mar', euros: 13, pv: 1398, amt: 2210,
   },
   {
-    name: 'Mercredi', uv: 30, pv: 9800, amt: 2290,
+    name: 'Mer', euros: 7, pv: 9800, amt: 2290,
   },
   {
-    name: 'Jeudi', uv: 45, pv: 3908, amt: 2000,
+    name: 'Jeu', euros: 17, pv: 3908, amt: 2000,
   },
   {
-    name: 'Vendredi', uv: 15, pv: 4800, amt: 2181,
+    name: 'Ven', euros: 2.5, pv: 4800, amt: 2181,
   },
   {
-    name: 'Samedi', uv: 60, pv: 3800, amt: 2500,
+    name: 'Sam', euros: 0, pv: 3800, amt: 2500,
   },
   {
-    name: 'Dimanche', uv: 20, pv: 4300, amt: 2100,
+    name: 'Dim', euros: 0, pv: 4300, amt: 2100,
   },
 ];
 
@@ -68,7 +68,7 @@ export default class Example extends PureComponent {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
-                <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+                <Area type="monotone" dataKey="euros" stroke="#8884d8" fill="#8884d8" />
                 <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
                 </AreaChart>
               </div>

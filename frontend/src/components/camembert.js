@@ -9,7 +9,7 @@ class ApexChart extends Component {
 
     this.state = {
     
-      series: [21, 16, 5, 9, 13,5],
+      series: [21, 16, 4, 9, 13,5],
       options: {
         chart: {
           width: 380,

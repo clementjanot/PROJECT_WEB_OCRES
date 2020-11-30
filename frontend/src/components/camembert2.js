@@ -8,7 +8,7 @@ class camembert2 extends React.Component {
 
       this.state = {
       
-        series: [65.5, 35.5],
+        series: [64.5, 35.5],
         options: {
           chart: {
             type: 'donut',
