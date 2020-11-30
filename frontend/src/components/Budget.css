@@ -2,3 +2,7 @@
     text-align: center;
     color: black;
 }
+
+.budget-header p{
+   font-size: 11px;
+}
