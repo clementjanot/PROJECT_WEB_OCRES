@@ -9,7 +9,7 @@ import BarreDeNav from './components/Navigation';
 
 function App() {
   return (
-     <div>
+     <div className="col-12">
        <BrowserRouter>
         <div className="Placement">
           <BarreDeNav />

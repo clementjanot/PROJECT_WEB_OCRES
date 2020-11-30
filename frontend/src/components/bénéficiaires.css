@@ -17,6 +17,47 @@
   width: 120px;
 }
 
+.Vir{
+  width: 5.375em;
+  background-color:  rgba(242, 126, 157, 0.85);
+  color: white;
+  margin: 0px 0px 0px 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Vir:hover {
+  background-color: rgba(221, 92, 126, 0.85);
+}
+.Supr{
+  width:5.375em;
+  background-color:  rgba(13, 92, 196, 0.85);
+  color: white;
+  margin: 0px 2px 0px 0px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Supr:hover {
+  background-color: rgba(47, 137, 255, 0.85);
+}
+
+.AjoutBouton{
+  width: 5.375em;
+  background-color:  rgba(242, 126, 157, 0.85);
+  color: white;
+  margin: 0px 2px 0px 0px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.AjoutBouton:hover {
+  background-color: rgba(236, 90, 129, 0.85);
+}
+
 @media only screen and (min-width: 71.25em){
   .contacts-header{
       font-size: 100%;
