@@ -5,6 +5,6 @@ import PieChart from '../components/camembert';
 export default {
     title : 'Camembert'
 };
-export const Camembert = () => <PieChart primary>Camembert</PieChart>;
+export const Pie = () => <PieChart primary>Camembert</PieChart>;
 
 

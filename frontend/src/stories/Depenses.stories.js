@@ -1,4 +1,4 @@
-// Camembert.js
+// Depenses.js
 
 import React from 'react';
 import BarChart from '../components/Depenses';
