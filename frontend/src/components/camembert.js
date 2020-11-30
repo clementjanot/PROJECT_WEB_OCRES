@@ -9,13 +9,14 @@ class ApexChart extends Component {
 
     this.state = {
     
-      series: [44, 55, 13, 43, 22],
+      series: [21, 16, 5, 9, 13,5],
       options: {
         chart: {
           width: 380,
+
           type: 'pie',
         },
-        labels: ['Logement', 'Alim', 'Banque', 'Transports', 'Loisirs'],
+        labels: ['Logement', 'Alimentation', 'Banque', 'Transports', 'Loisirs'],
         responsive: [{
           breakpoint: 480,
           options: {
@@ -40,7 +41,7 @@ class ApexChart extends Component {
       
 
 <div id="chart">
-<ReactApexChart options={this.state.options} series={this.state.series} type="pie" width={280} />
+<ReactApexChart options={this.state.options} series={this.state.series} type="pie" width={380}  />
 </div>
 
 

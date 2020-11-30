@@ -17,7 +17,6 @@ export default class todo extends React.Component {
 
     render() {
         return (
-            <div className = "col-md-12">
 
                 <header className = "contacts-header">
                     <Intitule name={this.state.nomWidget}/>                        
@@ -56,7 +55,7 @@ export default class todo extends React.Component {
                         </Col>
                     </Row>
                 </header>
-            </div>
+           
         )
     }
 }

@@ -3,7 +3,7 @@ import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
 } from 'recharts';
 import Intitule from './Intitule';
-import './SuiviDesClients.css';
+import './Depenses.css';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -46,7 +46,6 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-      <div className = "col-md-12">
         <header className = "header-client">
             <Intitule name={this.state.nomWidget}/>
             
@@ -75,7 +74,6 @@ export default class Example extends PureComponent {
               </div>
             </div>
         </header>
-      </div>
     );
   }
 }

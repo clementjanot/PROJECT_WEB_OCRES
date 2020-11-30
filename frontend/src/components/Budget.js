@@ -18,14 +18,13 @@ class Budget extends React.Component {
 
     render() {
         return (
-            <div className="col-md-12">
-                <header className="budget-header">
+            
+                <div className="budget-header">
                     <Intitule name={this.state.nameWidget}/>
-                    <Row>
+                    <p>Detail des 65,5 € de depenses</p>
                         <Camembert/>
-                    </Row>
-                </header>  
-            </div>
+                </div>  
+            
         )
     }
 }

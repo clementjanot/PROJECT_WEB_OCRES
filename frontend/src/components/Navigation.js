@@ -16,7 +16,7 @@ class BarreDeNavigation extends React.Component{
         return(
         <div className="NavBar">
             <img src={photo} className="App-photo" alt="logo" />
-            <NavLink to="/" className="contour"><img src={dashboard} className="App-photo" alt="logo" ></img></NavLink>
+            <NavLink to="/" className="contour"><img src={dashboard} className="iconMenu2" alt="logo" ></img></NavLink>
             <NavLink to="/Formulaire" className="contour"><img src={help} className="iconMenu2" alt="logo" ></img></NavLink>
             <NavLink to="/" className="contour"><img src={wallet} className="iconMenu2" alt="logo" ></img></NavLink>
             <NavLink to="/" className="contour"><img src={folder} className="iconMenu2" alt="logo" ></img></NavLink>

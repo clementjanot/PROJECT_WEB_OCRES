@@ -1,0 +1,14 @@
+.teatet{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.react-calendar__month-view__weekdays {
+    color: green;
+  }
+  
+  .react-calendar__navigation button {
+    font-size: 1em;
+    background-color: green;
+  }

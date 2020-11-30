@@ -1,7 +1,7 @@
 // Camembert.js
 
 import React from 'react';
-import BarChart from '../components/SuiviDesClients';
+import BarChart from '../components/Depenses';
     
 export default {
     title : 'Depenses'

@@ -7,59 +7,46 @@ import Col from 'react-bootstrap/Col';
 
 import ToDo from'./components/todo';
 import Calendrier from './components/calendrier';
-import Bénéficiaires from './components/bénéficiaires';
-import SuiviDesClient from './components/SuiviDesClients';
+import Beneficiaires from './components/bénéficiaires';
+import SuiviDesClient from './components/Depenses';
 import BudgetSemaine from './components/budgetSemaine';
 import Budget from './components/Budget';
 import Meeting from './components/meeting';
+import './MonDashboard.css'
 
 class MDashboard extends React.Component{
   
-    render (){
-        return (
-            <Container fluid>
-        <Row className = "dimension">
-          <Row>
-            <Col lg={11} md={11} sm={11} xs={11} xl={11}>
-              <Row>
-                <Col lg={8} md={8} sm={8} xs={8} xl={8}>
-                  <SuiviDesClient/>
-                </Col>
-
-                <Col lg={4} md={4} sm={4} xs={4} xl={4}>
-                  <BudgetSemaine/>
-                </Col>
-              </Row>
-              <Row>
-                <Col lg={4} md={4} sm={4} xs={4} xl={4}>
-                  <Bénéficiaires/>
-                </Col>
-
-                <Col lg={4} md={4} sm={4} xs={4} xl={4}>
-                  <Row>
-                    <Calendrier/>
-                  </Row>
-                  <Row>
-                    <Budget/>
-                  </Row>
-                </Col>
-
-                <Col className = "conteneurs" lg={4} md={4} sm={4} xs={4} xl={4}>
-                  <Row>
-                    <Meeting/>
-                  </Row>
-                  <Row>
-                    <ToDo/>
-                  </Row>
-                </Col>
-
-              </Row>
-            </Col>
-          </Row>
+  render (){
+    return (
+      <Container fluid>
+        <Row>
+          <Col lg={8} md={12} sm={12} >
+            <Row>
+              <Col className="ConteneurDepenses"><SuiviDesClient/></Col>
+            </Row>
+            <Row>
+              <Col className="ConteneurBudgetSem"><BudgetSemaine/></Col>
+              <Col className="ConteneurBudget"><Budget/></Col>
+            </Row>
+            <Row>
+              <Col className="ConteneurBeneficairest" ><Beneficiaires/></Col>
+            </Row>
+          </Col>
+          <Col className = "conteneurs" lg={4} md={12} sm={12} xs={12}>
+            <Row>
+              <Col className = "conteneurMeeting"><Meeting/></Col>
+            </Row>
+            <Row>
+              <Col className = "conteneurTodo"><ToDo/></Col>
+            </Row>
+            <Row>
+              <Col className = "conteneurCalen"><Calendrier/></Col>
+            </Row>
+          </Col>
         </Row>
       </Container>
-        )
+    )
     
-    }
+  }
 
 }export default MDashboard;
