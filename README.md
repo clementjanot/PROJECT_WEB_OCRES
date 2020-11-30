@@ -19,7 +19,7 @@ Poue cela :<br>
     - npm start<br>
    
 <h3>Rendu du dashboard:</h3>
-![Notre_Dashboard](./Notre_Dashboard.png)
+<img src="./Notre_Dashboard.png">
 
 <h3>Problèmes rencontrés : </h3><br>
 - Mise en commun des widgets que l'on a codé séparemment avec bootstrap et css. <br>
