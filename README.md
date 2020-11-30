@@ -7,13 +7,13 @@ Nous avons réalisé un dashboard pour un suivi financier à usage personnel.
 Notre dashboard se compose d'un suivi des dépenses, d'une liste des bénéficaires de virements, d'une répartition des dépenses, d'un calendrier avec suivi des meeting du jour et des virements à effectuer et d'un suivi des objectifs hebdomaires fixés.
 
 <h3>Lancer le projet :</h3><br>
-Pour pouvoir lancer le projet il vous faudra installer npm. 
-Poue cela :
-1/ Cloner le projet
-2/ Installer npm avec la commande suivante dans /frontend
-    - npm install
-3/ Par la suite, lancer le projet: 
-    - npm start
+Pour pouvoir lancer le projet il vous faudra installer npm. <br>
+Poue cela :<br>
+1/ Cloner le projet <bR>
+2/ Installer npm avec la commande suivante dans /frontend<br>
+    - npm install<br>
+3/ Par la suite, lancer le projet: <br>
+    - npm start<br>
 
 <h3>Problèmes rencontrés : </h3><br>
 - Mise en commun des widgets que l'on a codé séparemment avec bootstrap et css. 
