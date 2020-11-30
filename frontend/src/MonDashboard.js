@@ -12,7 +12,6 @@ import SuiviDesClient from './components/SuiviDesClients';
 import BudgetSemaine from './components/budgetSemaine';
 import Budget from './components/Budget';
 import Meeting from './components/meeting';
-import Explorer from './components/explorer';
 
 class MDashboard extends React.Component{
   
@@ -21,10 +20,6 @@ class MDashboard extends React.Component{
             <Container fluid>
         <Row className = "dimension">
           <Row>
-            <Col lg={1} md={1} sm={1} xs={1} xl={1}>
-              <Explorer/>
-            </Col>
-
             <Col lg={11} md={11} sm={11} xs={11} xl={11}>
               <Row>
                 <Col lg={8} md={8} sm={8} xs={8} xl={8}>

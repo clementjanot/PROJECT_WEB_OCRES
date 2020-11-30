@@ -11,7 +11,7 @@ function App() {
   return (
      <div>
        <BrowserRouter>
-        <div>
+        <div className="Placement">
           <BarreDeNav />
             <Switch>
              <Route path="/" component={Dashbb} exact/>

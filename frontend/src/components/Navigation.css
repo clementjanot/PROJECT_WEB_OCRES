@@ -1,0 +1,16 @@
+.NavBar{
+    Width: 150px;
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+    border: 2px solid #F24472;
+    border-radius: 10px;
+    margin: 0px 0px 0px 20px;
+}
+.App-photo {
+    max-width: 80%;
+    border-radius: 50px;
+  }
+
+  .iconMenu2{
+      max-width: 80%;
+  }
