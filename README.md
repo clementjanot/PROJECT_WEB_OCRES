@@ -7,7 +7,7 @@ Nous avons réalisé un dashboard pour un suivi financier à usage personnel.
 Notre dashboard se compose d'un suivi des dépenses, d'une liste des bénéficaires de virements, d'une répartition des dépenses, d'un calendrier avec suivi des meeting du jour et des virements à effectuer et d'un suivi des objectifs hebdomaires fixés.
 
 <h3>Notre wireframe sur figma:</h3>
-![Wirframe2](./Wirframe2.PNG)
+![Wirframe2](./Wirframe2.png)
 
 <h3>Lancer le projet :</h3><br>
 Pour pouvoir lancer le projet il vous faudra installer npm. <br>
@@ -19,7 +19,7 @@ Poue cela :<br>
     - npm start<br>
    
 <h3>Rendu du dashboard:</h3>
-![Notre_Dashboard](./Notre_Dashboard.PNG)
+![Notre_Dashboard](./Notre_Dashboard.png)
 
 <h3>Problèmes rencontrés : </h3><br>
 - Mise en commun des widgets que l'on a codé séparemment avec bootstrap et css. <br>
