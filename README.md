@@ -2,7 +2,7 @@
 
 Clément Janot & Amandine Ziegler
 
-<p>Description du projet : </p>
+<h4>Description du projet : </h4>
 Nous avons réalisé un dashboard pour un suivi financier à usage personnel. 
 Notre dashboard se compose d'un suivi des dépenses, d'une liste des bénéficaires de virements, d'une répartition des dépenses, d'un calendrier avec suivi des meeting du jour et des virements à effectuer et d'un suivi des objectifs hebdomaires fixés.
 
