@@ -24,8 +24,8 @@ class CoursDesActions extends React.Component {
         return (
             <div className = "formulaire">
                 <Container>
-                <h2>Remplissez le fromulaire d'entreprise</h2>
-                <p>Ce formulaire a pour but de mieux vous connaitre à fin de réaliser un dashboard personalisé</p>
+                <h2>Remplissez le fromulaire</h2>
+                <p>Ce formulaire a pour but de mieux vous connaitre afin de réaliser un dashboard personalisé</p>
                 
                 <form method="" className="fff">
                     <Row>
