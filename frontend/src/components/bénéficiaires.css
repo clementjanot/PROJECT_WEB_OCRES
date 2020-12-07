@@ -1,6 +1,11 @@
 .contacts-header {
     text-align: center;
     color: black;
+
+    border: solid #1C4AA6;
+    border-radius: 10px;
+    margin: 10px 0px 0px 0px;
+    background-color: #5d8ae6;
   }
 .contacts-header p {
   font-size: 0.75em;

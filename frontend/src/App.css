@@ -5,5 +5,13 @@
 
 .Placement{
   display: flex;
+  flex-direction: row;
 }
 
+@media only screen and (max-width: 48em){
+  .Placement{
+    display: flex;
+    flex-direction: column;
+  }
+  
+}

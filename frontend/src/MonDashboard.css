@@ -1,28 +1,17 @@
 .ConteneurDepenses{
-    border: solid rgba(242, 68, 114, 0.85);
-    border-radius: 10px;
-    background-color: rgba(255, 169, 192, 0.85);
-    margin: 5px 10px 5px 20px;
+    
+   
 }
 .ConteneurBudgetSem{
-    border: solid rgba(242, 68, 114, 0.85);
-    border-radius: 10px;
-    margin: 5px 5px 5px 20px;
-    background-color: rgba(255, 169, 192, 0.85);
+   
 }
 
 .ConteneurBudget{
-    border: solid rgba(242, 68, 114, 0.85);
-    border-radius: 10px;
-    margin: 5px 10px 5px 5px;
-    background-color: rgba(255, 169, 192, 0.85);
+    
 }
 
 .ConteneurBeneficairest{
-    border: solid #1C4AA6;
-    border-radius: 10px;
-    margin: 5px 10px 5px 20px;
-    background-color: #5d8ae6;
+
 }
 
 .conteneurs {

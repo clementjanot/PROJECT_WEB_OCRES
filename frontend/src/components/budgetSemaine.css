@@ -4,6 +4,10 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  border: solid rgba(242, 68, 114, 0.85);
+  border-radius: 10px;
+  background-color: rgba(255, 169, 192, 0.85);
+  margin: 10px 0px 0px 0px;
 }
 .semaine-header p {
   font-size: 11px;
