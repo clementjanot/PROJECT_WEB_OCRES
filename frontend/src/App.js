@@ -19,6 +19,12 @@ class App extends Component{
           "email" : "am.gmail.com",
           "pwd" : "oooo",
         },
+        "budgetSemaine" :{
+          "budgetFixe":"100",
+          "depense": "64.5",
+          "pasDepense":"35.5",
+          "series":[64.5,100-64.5],
+        },
         "meeting":[
           {
             "nom" : "Call avec M.DUPONT",

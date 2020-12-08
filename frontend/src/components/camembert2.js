@@ -8,7 +8,7 @@ class camembert2 extends React.Component {
 
       this.state = {
       
-        series: [64.5, 35.5],
+        //series: [64.5, 35.5],
         options: {
           chart: {
             type: 'donut',
@@ -40,7 +40,7 @@ labels: ['Budget dépensé', 'Budget à dépenser'],
         
 
   <div id="chart">
-<ReactApexChart options={this.state.options} series={this.state.series} type="donut" width={300}  />
+<ReactApexChart options={this.state.options} series={this.props.depenses.series} type="donut" width={300}  />
 </div>
 
 

@@ -23,10 +23,10 @@ class BudgetSemaine extends React.Component {
                 <div className = "semaine-header">
                     <Intitule name={this.state.nameWidget}/>
                     <div className="rrrrr">
-                            <p>Vous vous étiez fixé un budget de <b>{this.state.montantInit}</b> pour cette semaine.</p>
+                            <p>Vous vous étiez fixé un budget de <b>{this.props.depenses.budgetFixe} €</b> pour cette semaine.</p>
                     
-                            <p>Il vous reste <b>{this.state.montantRest}</b>.</p>
-                            <Camembert2/>
+                            <p>Il vous reste <b>{this.props.depenses.pasDepense} €</b>.</p>
+                            <Camembert2 depenses={this.props.depenses}/>
                             </div>
                     
                 </div>

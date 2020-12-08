@@ -25,7 +25,7 @@ class MDashboard extends React.Component{
               <Col className="ConteneurDepenses"><SuiviDesClient/></Col>
             </Row>
             <Row>
-              <Col className="ConteneurBudgetSem"><BudgetSemaine/></Col>
+              <Col className="ConteneurBudgetSem"><BudgetSemaine depenses={this.props.data.budgetSemaine}/></Col>
               <Col className="ConteneurBudget"><Budget/></Col>
             </Row>
             <Row>
