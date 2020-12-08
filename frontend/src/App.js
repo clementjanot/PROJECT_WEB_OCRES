@@ -32,8 +32,23 @@ class App extends Component{
             "nom" : "Call avec le Directeur d'agence",
             "date" : "5.00 pm",
           },
-        ]
-        
+        ],
+        "beneficiaires":[
+          {
+            "nom" : "Mme Janot",
+            "prenom" : "Agnes",
+            "numCompte" : "FR 4500 560 56 6788 89",
+            "bic" : "34G56H",
+            "banque" : "HSBC Paris",
+          },
+          {
+            "nom" : "Ziegler",
+            "prenom" : "Amandine",
+            "numCompte" : "FR 4556 67889 678 89897",
+            "bic" : "56Z9JY",
+            "banque" : "BNP Bank FR",
+          },
+        ], 
       }
     }
   }

@@ -16,30 +16,30 @@ export default class todo extends React.Component {
     }
 
     render() {
+        if (this.props.bene == null || this.props.bene < 2) {
+            return (<p>Aucun RDV.</p>);
+        }
+
         return (
 
                 <header className = "contacts-header">
                     <Intitule name={this.state.nomWidget}/>                        
                     <Row>
                         <Col lg={6} md={6} sm={6}>
-                            <p>
-                                <b>Amandine ZIEGLER</b>
-                                <br></br>Numéro de compte : ****0102
-                                <br></br>BIC : ABCDEFG1XX
-                                <br></br>Nom et adresse de la banque : BNP BANK FR
-                                <br></br>
-                                <Input className="Supr" type="submit" value="Supprimer"/> 
-                                <Input className="Vir"type="submit" value="Virement"/>
-                                <br></br><br></br>                  
-                                <b>Clément JANOT</b>
-                                <br></br>Numéro de compte : ****0304 
-                                <br></br>BIC : HIJKLM2XX
-                                <br></br>Nom et adresse de la banque : HSBC BANK IT
-                                <br></br><br></br>
-                                <Input className="Supr" type="submit" value="Supprimer"/> 
-                                <Input className="Vir"type="submit" value="Virement"/>    
-                                <br></br><br></br>
-                            </p>
+                            <ul>
+                                {this.props.bene.map((info,index)=>(
+                                    <li>
+                                        <b>{info.nom} {info.prenom}</b>
+                                        <p>Numéro de compte : {info.numCompte}<br></br>
+                                        Bic : {info.bic} <br></br>
+                                        Banque : {info.banque}</p>
+                                        <Input className="Supr" type="submit" value="Supprimer"/> 
+                                        <Input className="Vir"type="submit" value="Virement"/> 
+                                        <br></br><br></br>
+                                    </li>
+                                ))}
+            
+                            </ul>
                         </Col>
 
                         <Col className = "colonne2" lg={6} md={6} sm={6}>

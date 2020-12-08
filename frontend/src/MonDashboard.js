@@ -29,7 +29,7 @@ class MDashboard extends React.Component{
               <Col className="ConteneurBudget"><Budget/></Col>
             </Row>
             <Row>
-              <Col className="ConteneurBeneficairest" ><Beneficiaires/></Col>
+              <Col className="ConteneurBeneficairest" ><Beneficiaires bene={this.props.data.beneficiaires}/></Col>
             </Row>
           </Col>
           <Col className = "conteneurs" lg={4} md={12} sm={12} xs={12}>
