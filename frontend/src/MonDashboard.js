@@ -34,7 +34,7 @@ class MDashboard extends React.Component{
           </Col>
           <Col className = "conteneurs" lg={4} md={12} sm={12} xs={12}>
             <Row>
-              <Col className = "conteneurMeeting"><Meeting/></Col>
+              <Col className = "conteneurMeeting"><Meeting RDV={this.props.data.meeting} /></Col>
             </Row>
             <Row>
               <Col className = "conteneurTodo"><ToDo/></Col>

@@ -14,12 +14,16 @@ export default class meeting extends React.Component {
     }
 
 render () {
+    if (this.props.RDV == null || this.props.RDV < 2) {
+        return (<p>Aucun RDV.</p>);
+    }
+
     return (
+
         <div className = "meeting-header" ><Intitule name={this.state.nomWidget}/>
-            <p>
-                11.00a.m : Call avec M.DUPONT
-                <br></br>5.00p.m  : Call avec le Directeur d'agence
-            </p>
+            {this.props.RDV.map((rdv,index)=>(
+                <p>{rdv.date} : {rdv.nom}</p>
+            ))}
         </div>
             
         
