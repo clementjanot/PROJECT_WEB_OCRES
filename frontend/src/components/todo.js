@@ -17,20 +17,22 @@ export default class todo extends React.Component {
     }
 
     render() {
+        if (this.props.liste == null || this.props.liste< 2) {
+            return (<p>Aucune chose à faire</p>);
+        }
         return (
            <Container className = "todo-header">
                 <Intitule name={this.state.nomWidget}/>
                 <Row>
                     <Col className = "colonnes" lg={6} md={6} sm={6}>
                         <h3>Virement à effectuer : </h3>
-                        <p>
-                            09/12 : Loyer, 850€
-                            <br></br><Input className="Supr" type="submit" value="Supprimer"/>
-                        </p>
-                        <p> 
-                            10/12 : SFR, 35€
-                            <br></br><Input className="Supr" type="submit" value="Supprimer"/> 
-                        </p>
+                        {this.props.liste.map((info,index)=>(
+                                <p>{info.date} : {info.nomTache}, {info.prix} €
+                                <br></br><Input className="Supr" type="submit" value="Supprimer"/>
+                                </p>  
+                        ))}
+            
+                            
                     </Col>
 
                     <Col className = "colonnes" lg={6} md={6} sm={6}>
