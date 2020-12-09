@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 
-const data = [
+/*const data = [
   {
     name: 'Lun', euros: 25, pv: 2400, amt: 2400,
   },
@@ -31,7 +31,7 @@ const data = [
   {
     name: 'Dim', euros: 0, pv: 4300, amt: 2100,
   },
-];
+];*/
 
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/Lrffmzfc/';
@@ -51,15 +51,15 @@ export default class Example extends PureComponent {
             
             <div className = "div-client">
               <div>
-                <h4>Salut {this.state.nomp},</h4>
-                <p>Ton nouveau solde est de <b>{this.state.nouveauSolde}</b>. </p>
+                <h4>Salut {this.props.profil.prenom},</h4>
+                <p>Ton nouveau solde est de <b>{this.props.jour.sold} €</b>. </p>
               </div>
 
               <div className="graph">
                 <AreaChart
                 width={500}
                 height={150}
-                data={data}
+                data={this.props.jour.data}
                 margin={{
                 top: 10, right: 30, left: 0, bottom: 0,
                 }}

@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 import ToDo from'./components/todo';
 import Calendrier from './components/calendrier';
 import Beneficiaires from './components/bénéficiaires';
-import SuiviDesClient from './components/Depenses';
+import DepensesParJour from './components/Depenses';
 import BudgetSemaine from './components/budgetSemaine';
 import Budget from './components/Budget';
 import Meeting from './components/meeting';
@@ -22,7 +22,7 @@ class MDashboard extends React.Component{
         <Row>
           <Col lg={8} md={12} sm={12} >
             <Row>
-              <Col className="ConteneurDepenses"><SuiviDesClient/></Col>
+              <Col className="ConteneurDepenses"><DepensesParJour profil={this.props.data.profil} jour={this.props.data.depensesParJour}/></Col>
             </Row>
             <Row>
               <Col className="ConteneurBudgetSem"><BudgetSemaine depenses={this.props.data.budgetSemaine}/></Col>

@@ -14,10 +14,56 @@ class App extends Component{
     this.state={
       data : {
         "profil":{
-          "nom":"Amandine",
-          "Prenom" : "AM",
+          "nom":"ziegler",
+          "prenom" : "Amandine",
           "email" : "am.gmail.com",
           "pwd" : "oooo",
+        },
+        "depensesParJour" :{
+          "sold":"950",
+          "data" : [{
+            "name": 'Lun',
+            "euros": 25,
+            "pv": 2400,
+            "amt": 2400,
+          },
+          {
+            "name": 'Mar',
+            "euros": 13,
+            "pv": 2400,
+            "amt": 2400,
+          },
+          {
+            "name": 'Mer',
+            "euros": 17,
+            "pv": 2400,
+            "amt": 2400,
+          },
+          {
+            "name": 'jeu',
+            "euros": 2.5,
+            "pv": 2400,
+            "amt": 2400,
+          },
+          {
+            "name": 'Ven',
+            "euros": 34,
+            "pv": 2400,
+            "amt": 2400,
+          },
+          {
+            "name": 'Sam',
+            "euros": 2,
+            "pv": 2400,
+            "amt": 2400,
+          },
+          {
+            "name": 'Dim',
+            "euros": 0,
+            "pv": 2400,
+            "amt": 2400,
+          },
+          ]
         },
         "budgetSemaine" :{
           "budgetFixe":"100",
