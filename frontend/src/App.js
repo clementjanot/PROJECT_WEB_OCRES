@@ -25,6 +25,29 @@ class App extends Component{
           "pasDepense":"35.5",
           "series":[64.5,100-64.5],
         },
+        "detailsDepenses" :{
+          "depenses":"64.5",
+          "series": [21, 16, 4, 9, 13,5],
+          "options": {
+            "chart": {
+              "width": 280,
+    
+              "type": 'pie',
+            },
+            "labels": ['Logement', 'Alimentation', 'Banque', 'Transports', 'Loisirs'],
+            "responsive": [{
+              "breakpoint": 480,
+              "options": {
+                "chart": {
+                  "width": 200
+                },
+                "legend": {
+                  "position": 'bottom'
+                }
+              }
+            }]
+          },
+        },
         "meeting":[
           {
             "nom" : "Call avec M.DUPONT",

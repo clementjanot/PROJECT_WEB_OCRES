@@ -9,8 +9,8 @@ class ApexChart extends Component {
 
     this.state = {
     
-      series: [21, 16, 4, 9, 13,5],
-      options: {
+      //series: [21, 16, 4, 9, 13,5],
+      /*options: {
         chart: {
           width: 280,
 
@@ -28,7 +28,7 @@ class ApexChart extends Component {
             }
           }
         }]
-      },
+      }*/
     
     
     };
@@ -41,7 +41,7 @@ class ApexChart extends Component {
       
 
 <div id="chart">
-<ReactApexChart options={this.state.options} series={this.state.series} type="pie" width={280}  />
+<ReactApexChart options={this.props.budgetDep.options} series={this.props.budgetDep.series} type="pie" width={280}  />
 </div>
 
 
