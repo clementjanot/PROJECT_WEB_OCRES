@@ -148,8 +148,8 @@ class App extends Component{
           <BarreDeNav />
           
             <Switch>
-             <Route path="/" render={(props) => < Dashbb {...props} data={this.state.data} />}/>
-             <Route path="/formulaire" component={Formulaire}/>
+             <Route exact path="/" render={(props) => < Dashbb {...props} data={this.state.data} />}/>
+             <Route path="/Formulaire" render={(props) => < Formulaire {...props} data={this.state.data} />}/>
            </Switch>
            
         </div> 
