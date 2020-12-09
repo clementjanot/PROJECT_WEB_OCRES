@@ -28,7 +28,7 @@ class ApexChart extends Component {
             }
           }
         }]
-      }*/
+      },*/
     
     
     };
