@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = 'http://localhost:3001';
+const URL = 'http://localhost:3002';
 
 //afficher les bénéficiaire
 export const getBenef = () => {
@@ -13,8 +13,8 @@ export const createBenef = (nom, IBAN) => {
 }
 
 //supprimer un bénéficiaire
-export const deleteBenef = (benefID) => {
-    return axios.delete(URL + '/beneficiaire', {benefID})
+export const deleteBenef = (benefId) => {
+    return axios.delete(URL + '/beneficiaire' + benefId )
 }
 
 //mise à jour des bénéficiaires
@@ -22,7 +22,7 @@ export const updateBenef = (benef) => {
     return axios.put(URL + '/beneficiaire/' + benef._id, benef)
 }
 
-//afficher la todo
+/*//afficher la todo
 export const getTodo = () => {
     return axios.get(URL + "/todo")
 }
@@ -37,8 +37,8 @@ export const getMeet = () => {
     return axios.get(URL + "/meeting")
 }
 
-/*formulaire*/
+formulaire
 //ajout meeting
 export const createMeet = () => {
     return axios.post(URL + "/meeting", {heure, tache})
-}
+}*/

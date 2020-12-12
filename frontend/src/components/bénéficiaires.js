@@ -1,21 +1,24 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './bénéficiaires.css';
 import Intitule from './Intitule';
-import {getBenef, createBenef, deleteBenef, updateBenef} from '../../utils/API';
+import {getBenef, createBenef, deleteBenef, updateBenef} from './utils/API';
 
 import {Button, FormGroup, FormControl, Form, Row, Col, ListGroup} from "react-bootstrap";
 import {ControlLabel} from 'rsuite';
 
-export default class todo extends React.Component {
+/*export default class TTodo extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             nomWidget : "Bénéficiaires",
         }
-    }
+    }*/
+function Gbenef(){
 
 
-    render() {
+
+
+    //render() {
 
         const [nom, setNom] = useState(null)
         const [IBAN, setIBAN] = useState(null)
@@ -29,7 +32,7 @@ export default class todo extends React.Component {
             getBenef().then(res => {
                 setData(res.data)
             }).catch(e => {
-                alert(e)
+                alert("t")
             })
         }
 
@@ -37,7 +40,7 @@ export default class todo extends React.Component {
             createBenef(nom, IBAN).then(res => {
                 getBenefAction()
             }).catch(e => {
-                alert(e)
+                alert("u")
             })
         }
 
@@ -45,7 +48,7 @@ export default class todo extends React.Component {
             deleteBenef(benef._id).then(res => {
                 getBenefAction()
             }).catch(e => {
-                alert(e)
+                alert("e")
             })
         }
 
@@ -54,7 +57,7 @@ export default class todo extends React.Component {
                 alert("Maj réussie")
                 getBenefAction()
             }).catch(e => {
-                alert(e)
+                alert("A")
             })
         }
 
@@ -74,29 +77,25 @@ export default class todo extends React.Component {
             setData(newData)
         }
 
-        if (this.props.bene == null || this.props.bene < 2) {
-            return (<p>Aucun RDV.</p>);
-        }
-        else {
+       
             return (
 
-                <header className = "contacts-header">
-                    <Intitule name={this.state.nomWidget}/>                        
+                <header className = "contacts-header">                     
                     <Row>
                         <Col lg={6} md={6} sm={6}>
                             {data.map((benef, index) => (
-                                <ListGroup.Item key={"ecran" + index}>
+                                <ListGroup.Item key={"benef" + index}>
                                     <Form>
                                         <Form.Group >
                                             <ControlLabel>Noms</ControlLabel>
                                             <Form.Control type="text" placeholder="Nom" onChange={e => handleChangeNom(e.target.value, index)} value={benef.nom} />
-                                            <Button onClick={deleteBenefAction(benef)} block bsSize="large" type="submit">Supprimer</Button>
+                                            <Button  block bsSize="large" type="submit">Supprimer</Button>
                                         </Form.Group>
 
                                         <Form.Group >
                                             <ControlLabel>IBAN</ControlLabel>
                                             <Form.Control type="text" placeholder="IBAN" onChange={e => handleChangeIBAN(e.target.value, index)} value={benef.IBAN} />
-                                            <Button onClick={deleteBenefAction(benef)} block bsSize="large" type="submit">Supprimer</Button>
+                                            <Button block bsSize="large" type="submit">Supprimer</Button>
                                         </Form.Group>
                                     </Form>
 
@@ -128,7 +127,6 @@ export default class todo extends React.Component {
                 </header>
            
         )
-        }
         
-    }
-}
+    //}
+} export default Gbenef;
