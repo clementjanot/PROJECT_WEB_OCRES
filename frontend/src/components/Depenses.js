@@ -7,6 +7,7 @@ import './Depenses.css';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import axios from 'axios';
 
 
 /*const data = [
@@ -40,8 +41,25 @@ export default class Example extends PureComponent {
     this.state ={
       nomWidget:"Dépenses de la semaine",
       nomp: "Amandine",
-      nouveauSolde :"948,55€"
+      nouveauSolde :"",
+      tes2:"",
+      test :[],
     };
+  }
+  async componentDidMount(){
+    axios.get('http://localhost:3002/detailsDepenses')
+      .then(response =>{
+        this.setState({
+          nouveauSolde: response.data[0].sold,
+          test2 : response.data[0].sold,
+          test : response.data[0],
+        
+        })
+      })
+      .catch((error)=>{
+        console.log(error);
+      })
+
   }
 
   render() {
@@ -52,7 +70,7 @@ export default class Example extends PureComponent {
             <div className = "div-client">
               <div>
                 <h4>Salut {this.props.profil.prenom},</h4>
-                <p>Ton nouveau solde est de <b>{this.props.jour.sold} €</b>. </p>
+                <p>Ton nouveau solde est de <b>{this.state.nouveauSolde} €</b>. </p>
               </div>
 
               <div className="graph">
