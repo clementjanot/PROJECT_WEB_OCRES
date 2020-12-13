@@ -8,6 +8,8 @@ const userTodo = require('./routes/todo');
 const userBeneficiaire = require('./routes/beneficiaire');
 const meetingRoutes=require('./routes/meeting');
 const budgetSemaineRoutes=require('./routes/budgetSemaine');
+const detailsDepensesRoutes=require('./routes/detailsDepenses');
+
 
 mongoose.connect('mongodb+srv://clemjnt:OCRES@cluster0.ag5x2.mongodb.net/DashBoard?retryWrites=true&w=majority',
   { useNewUrlParser: true,
@@ -34,5 +36,6 @@ app.use((req, res, next) => {
   app.use('/beneficiaire', userBeneficiaire);
   app.use('/meeting',meetingRoutes);
   app.use('/bugetSemaine',budgetSemaineRoutes);
+  app.use('/detailsDepenses',detailsDepensesRoutes);
  
 module.exports = app;
