@@ -6,6 +6,7 @@ const stuffRoutes =require('./routes/stuff');
 const userRoutes = require('./routes/user');
 const userTodo = require('./routes/todo');
 const userBeneficiaire = require('./routes/beneficiaire');
+const meetingRoutes=require('./routes/meeting');
 
 mongoose.connect('mongodb+srv://clemjnt:OCRES@cluster0.ag5x2.mongodb.net/DashBoard?retryWrites=true&w=majority',
   { useNewUrlParser: true,
@@ -30,5 +31,6 @@ app.use((req, res, next) => {
   app.use('/auth', userRoutes);
   app.use('/todo', userTodo);
   app.use('/beneficiaire', userBeneficiaire);
+  app.use('/meeting',meetingRoutes);
  
 module.exports = app;
