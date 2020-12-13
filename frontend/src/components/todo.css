@@ -19,6 +19,10 @@
   background-color: #F24472;
 }
 
+.hello {
+  background-color: #4886D9;
+}
+
 @media only screen and (min-width: 71.25em){
   .todo-header{
       font-size: 100%;

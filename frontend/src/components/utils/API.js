@@ -54,7 +54,7 @@ export const deleteMeet = (meetID) => {
 
 //ajout meeting
 export const createMeet = (heure, tache) => {
-    return axios.post(URL + '/meeting', {heure, tache})
+    return axios.post(URL + "/meeting", {heure, tache})
 }
 
 //mise à jour meetings

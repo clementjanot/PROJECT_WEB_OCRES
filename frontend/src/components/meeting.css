@@ -3,11 +3,6 @@
     color: black;
 }
 
-.meeting-header p {
-    color: black;
-    font-size: 12px;
-}
-
 .meeting-header button[type=submit] {
     width: 50%;
     background-color: #1C4AA6;

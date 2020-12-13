@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './meeting.css';
-
 import { getMeet, deleteMeet, createMeet, updateMeet } from './utils/API';
 
-import { Button, ListGroup, FormGroup, FormControl, Form } from 'react-bootstrap';
+import { Container, Button, Form, FormGroup, FormControl, FormCheck } from 'react-bootstrap';
 import { ControlLabel } from 'rsuite';
 
 function Gmeeting() {
@@ -23,13 +22,13 @@ function Gmeeting() {
             alert(e)
         })
     }
-    
+
     const createMeetAction = () => {
         createMeet(tache, heure).then(res => {
             alert("Meet ajouté")
             getMeetAction()
         }).catch(e => {
-            alert(e)
+            alert("erreur meeting")
         })
     }
 
@@ -51,34 +50,33 @@ function Gmeeting() {
     }
 
     const handleChangeTache = (tache, index) => {
-        // on crée une copie du state data
+        // création d'une copie state data
         let newData = [...data];
         newData[index].tache = tache
-        // on met à jour le state data
+        // maj state data
         setData(newData)
     }
 
     const handleChangeHeure = (heure, index) => {
-        // on crée une copie du state data
+        // création d'une copie  state data
         let newData = [...data];
         newData[index].heure = heure
-        // on met à jour le state data
+        // maj state data
         setData(newData)
     }
 
     return (
-
-        <div className="meeting-header" >
+        <Container className="meeting-header" >
 
             <h3>Meeting du jour</h3>
 
             {data.map((meets, index) => (
-                <ListGroup.Item key={"meets" + index}>
-                    <Form.Control type="text" placeholder="Heure" onChange={e => handleChangeHeure(e.target.value, index)} value={meets.heure} />
-                    <Form.Check type="checkbox" placeholder="Tache" onChange={e => handleChangeTache(e.target.value, index)} label={meets.tache} value={meets.tache} />
+                <Form>
+                    <FormControl type="text" placeholder="Heure" onChange={e => handleChangeHeure(e.target.value, index)} value={meets.heure} />
+                    <FormCheck type="checkbox" placeholder="Tache" onChange={e => handleChangeTache(e.target.value, index)} label={meets.tache} value={meets.tache} />
                     <Button type="submit" onClick={() => updateMeetAction(meets)}>Mettre à jour</Button>
                     <Button type="submit" onClick={() => deleteMeetAction(meets)}>Supprimer</Button>
-                </ListGroup.Item>
+                </Form>
             ))}
 
             <Form>
@@ -86,17 +84,17 @@ function Gmeeting() {
                 <ControlLabel><b>Ajout d'un meeting :</b></ControlLabel>
 
                 <FormGroup>
-                    <Form.Control type="date" onChange={e => setHeure(e.target.value)} value={heure} />
+                    <FormControl type="date" onChange={e => setHeure(e.target.value)} value={heure} />
                 </FormGroup>
 
                 <FormGroup>
                     <FormControl type="text" placeholder="information du rdv" onChange={e => setTache(e.target.value)} value={tache} />
                 </FormGroup>
 
-                <Button variant="primary" type="submit" onClick={createMeetAction}>Ajouter</Button>
+                <Button type="submit" onClick={createMeetAction}>Ajouter</Button>
             </Form>
-        </div>
 
-
+        </Container>
     )
+
 } export default Gmeeting;
