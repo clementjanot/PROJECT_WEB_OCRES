@@ -1,3 +1,63 @@
+import React from "react";
+import './Formulaire.css';
+
+import { Button, FormGroup, FormControl } from "react-bootstrap";
+import { ControlLabel } from 'rsuite';
+import API from "./utils/APIform";
+
+export default class Login extends React.Component {
+  state = {
+    email: "",
+    password: ""
+  };
+
+  send = async () => {
+    const { email, password } = this.state;
+    if (!email || email.length === 0) {
+      return;
+    }
+    if (!password || password.length === 0) {
+      return;
+    }
+    try {
+      const { data } = await API.login(email, password);
+      localStorage.setItem("token", data.token);
+      window.location = "/dashboard";
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  handleChange = (event) => {
+    this.setState({
+      [event.target.id]: event.target.value
+    });
+  };
+
+  render() {
+    const { email, password } = this.state;
+    return (
+      <div className="login">
+
+        <h5>Veuillez-vous connecter</h5>
+
+        <FormGroup controlId="email" bsSize="large">
+          <ControlLabel>Email</ControlLabel>
+          <FormControl autoFocus type="email" value={email} onChange={this.handleChange}/>
+        </FormGroup>
+
+        <FormGroup controlId="password" bsSize="large">
+          <ControlLabel>Password</ControlLabel>
+          <FormControl value={password} onChange={this.handleChange} type="password"/>
+        </FormGroup>
+
+        <Button type="submit" onClick={this.send} block bsSize="large" type="submit">Connexion</Button>
+      </div>
+    );
+  }
+}
+
+/*
 import React from 'react';
 import Intitule from './Intitule';
 import Moment from 'moment';
@@ -84,4 +144,4 @@ class CoursDesActions extends React.Component {
         )
     }
 }
-export default CoursDesActions;
+export default CoursDesActions;*/

@@ -1,65 +1,102 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './todo.css';
-import Intitule from './Intitule';
+import { getTodo, createTache, deleteTache, updateTodo } from './utils/API';
 
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+import { Row, Col, Container, Button, ListGroup, FormGroup, FormControl, Form } from 'react-bootstrap';
+import { ControlLabel } from 'rsuite';
 
-import {Button, FormGroup, FormControl} from "react-bootstrap";
+function Gtodo() {
 
-import {Input, ControlLabel} from 'rsuite';
+    const [tache, setTache] = useState(null)
+    const [date, setDate] = useState(null)
+    const [data, setData] = useState([])
 
-export default class todo extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            nomWidget:"To do",
-        }
+    useEffect(() => {
+        getTodoAction()
+    }, [])
+
+    const getTodoAction = () => {
+        getTodo().then(res => {
+            setData(res.data)
+        }).catch(e => {
+            alert(e)
+        })
     }
 
-    state = {
-        tache: "",
-    };
-
-    render() {
-        const {tache} = this.state;
-        if (this.props.liste == null || this.props.liste< 2) {
-            return (<p>Aucune chose à faire</p>);
-        }
-        return (
-           <Container className = "todo-header">
-                <Intitule name={this.state.nomWidget}/>
-                <Row>
-                    <Col className = "colonnes" lg={6} md={6} sm={6}>
-                        <h3>Virement à effectuer : </h3>
-                        {this.props.liste.map((info,index)=>(
-                                <p>{info.date} : {info.nomTache}, {info.prix} €
-                                <br></br><Input className="Supr" type="submit" value="Supprimer"/>
-                                </p>  
-                        ))}
-            
-                            
-                    </Col>
-
-                    <Col className = "colonnes" lg={6} md={6} sm={6}>
-                        <div>
-                            <FormGroup controlId="text1" bsSize="large">
-                                <ControlLabel>Nouvelle tâche :</ControlLabel>
-                                <FormControl
-                                    value={tache}
-                                    onChange={this.handleChange}
-                                    type="tache"
-                                />
-                            </FormGroup>
-                            <Button onClick={this.send} block bsSize="large" type="submit">
-                                Ajouter
-                            </Button>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-           
-        )
+    const createTacheAction = () => {
+        createTache(tache, date).then(res => {
+            alert("Tâche ajoutée")
+            getTodoAction()
+        }).catch(e => {
+            alert(e)
+        })
     }
-}
+
+    const deleteTacheAction = (todo) => {
+        deleteTache(todo._id).then(res => {
+            getTodoAction()
+        }).catch(e => {
+            alert(e)
+        })
+    }
+
+    const updateTodoAction = (todo) => {
+        updateTodo(todo).then(res => {
+            alert("Maj réussie")
+            getTodoAction()
+        }).catch(e => {
+            alert(e)
+        })
+    }
+
+    const handleChangeTache = (tache, index) => {
+        // on crée une copie du state data
+        let newData = [...data];
+        newData[index].tache = tache
+        // on met à jour le state data
+        setData(newData)
+    }
+
+    const handleChangeDate = (date, index) => {
+        // on crée une copie du state data
+        let newData = [...data];
+        newData[index].date = date
+        // on met à jour le state data
+        setData(newData)
+    }
+
+    return (
+        <Container className="todo-header">
+
+            <h3>To do list</h3>
+
+                {data.map((todo, index) => (
+                    <ListGroup.Item key={"todo" + index}>
+                        <Form.Control type="text" placeholder="Date" onChange={e => handleChangeDate(e.target.value, index)} value={todo.date} />
+                        <Form.Check type="checkbox" placeholder="Tache" onChange={e => handleChangeTache(e.target.value, index)} label={todo.tache} value={todo.tache} />
+                        <Button type="submit" onClick={() => updateTodoAction(todo)}>Mettre à jour</Button>
+                        <Button type="submit" onClick={() => deleteTacheAction(todo)}>Supprimer</Button>
+                    </ListGroup.Item>
+                ))}
+
+                <Form>
+
+                    <ControlLabel><b>Ajout d'une tâche :</b></ControlLabel>
+
+                    <FormGroup>
+                        <ControlLabel>Date</ControlLabel>
+                        <Form.Control type="text" placeholder="YYYY-MM-DD" onChange={e => setDate(e.target.date)} value={date} />
+                    </FormGroup>
+
+                    <FormGroup>
+                        <ControlLabel>A faire</ControlLabel>
+                        <FormControl type="text" placeholder="tache" onChange={e => setTache(e.target.tache)} value={tache} />
+                    </FormGroup>
+
+                    <Button variant="primary" type="button" onClick={createTacheAction}>Ajouter</Button>
+                </Form>
+
+        </Container>
+
+    )
+} export default Gtodo;

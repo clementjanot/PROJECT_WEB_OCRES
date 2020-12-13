@@ -22,45 +22,20 @@
   width: 120px;
 }
 
-.Vir{
-  width: 5.375em;
-  background-color:  rgba(242, 126, 157, 0.85);
+.colonnes button[type=submit] {
+  width: 50%;
+  background-color: #1C4AA6;
   color: white;
-  margin: 0px 0px 0px 2px;
+  font-size: 0.75em;
+  text-align: center;
+  padding: 10px 50px;
+  margin: 8px 0;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
 }
-
-.Vir:hover {
-  background-color: rgba(221, 92, 126, 0.85);
-}
-.Supr{
-  width:5.375em;
-  background-color:  rgba(13, 92, 196, 0.85);
-  color: white;
-  margin: 0px 2px 0px 0px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.Supr:hover {
-  background-color: rgba(47, 137, 255, 0.85);
-}
-
-.AjoutBouton{
-  width: 5.375em;
-  background-color:  rgba(242, 126, 157, 0.85);
-  color: white;
-  margin: 0px 2px 0px 0px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.AjoutBouton:hover {
-  background-color: rgba(236, 90, 129, 0.85);
+.colonnes button[type=submit]:hover {
+  background-color: #F24472;
 }
 
 @media only screen and (min-width: 71.25em){

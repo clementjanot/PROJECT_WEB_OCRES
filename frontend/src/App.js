@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import Dashbb from './MonDashboard';
 import Formulaire from './components/Formulaire';
+import Formulaire2 from './components/Formulaire2';
 import BarreDeNav from './components/Navigation';
 
 
@@ -150,6 +151,7 @@ class App extends Component{
             <Switch>
              <Route exact path="/" render={(props) => < Dashbb {...props} data={this.state.data} />}/>
              <Route path="/Formulaire" render={(props) => < Formulaire {...props} data={this.state.data} />}/>
+             <Route path="/Formulaire2" render={(props) => < Formulaire2 {...props} data={this.state.data} />}/>
            </Switch>
            
         </div> 
