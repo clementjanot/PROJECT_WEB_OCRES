@@ -4,35 +4,9 @@ import {
 } from 'recharts';
 import Intitule from './Intitule';
 import './Depenses.css';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import axios from 'axios';
 
 
-/*const data = [
-  {
-    name: 'Lun', euros: 25, pv: 2400, amt: 2400,
-  },
-  {
-    name: 'Mar', euros: 13, pv: 1398, amt: 2210,
-  },
-  {
-    name: 'Mer', euros: 7, pv: 9800, amt: 2290,
-  },
-  {
-    name: 'Jeu', euros: 17, pv: 3908, amt: 2000,
-  },
-  {
-    name: 'Ven', euros: 2.5, pv: 4800, amt: 2181,
-  },
-  {
-    name: 'Sam', euros: 0, pv: 3800, amt: 2500,
-  },
-  {
-    name: 'Dim', euros: 0, pv: 4300, amt: 2100,
-  },
-];*/
 
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/Lrffmzfc/';
@@ -42,23 +16,30 @@ export default class Example extends PureComponent {
       nomWidget:"Dépenses de la semaine",
       nomp: "Amandine",
       nouveauSolde :"",
-      tes2:"",
-      test :[],
+      allData:[],
     };
   }
+
   async componentDidMount(){
-    axios.get('http://localhost:3002/detailsDepenses')
-      .then(response =>{
+
+    try{
+    await axios.get('http://localhost:3002/detailsDepenses/5fd5dbb10eb2a5661082ecb3')
+      .then(async response =>{
+        const data = await response.data;
         this.setState({
-          nouveauSolde: response.data[0].sold,
-          test2 : response.data[0].sold,
-          test : response.data[0],
-        
+          allData:data.data,
+          nouveauSolde:data.sold,
         })
+        console.log(data.data);
+      
       })
       .catch((error)=>{
         console.log(error);
       })
+    }
+      catch(err){
+        console.log(err)
+      }
 
   }
 
@@ -77,7 +58,7 @@ export default class Example extends PureComponent {
                 <AreaChart
                 width={500}
                 height={150}
-                data={this.props.jour.data}
+                data={this.state.allData}
                 margin={{
                 top: 10, right: 30, left: 0, bottom: 0,
                 }}
