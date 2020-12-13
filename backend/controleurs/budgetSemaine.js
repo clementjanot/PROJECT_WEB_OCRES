@@ -31,6 +31,6 @@ exports.modificationBudgetSemaine = (req, res, next) => {
 
 exports.getallBudgetSemaine = (req, res, next) => {
     BudgetSemaine.find()
-      .then(budget => res.status(200).json(budget))
+      .then(budget => res.send(budget))
       .catch(error => res.status(400).json({ error }));
   };
