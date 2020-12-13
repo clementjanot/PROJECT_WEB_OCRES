@@ -7,3 +7,19 @@
     color: black;
     font-size: 12px;
 }
+
+.meeting-header button[type=submit] {
+    width: 50%;
+    background-color: #1C4AA6;
+    color: white;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 10px 50px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .meeting-header button[type=submit]:hover {
+    background-color: #F24472;
+  }

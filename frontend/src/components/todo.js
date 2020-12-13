@@ -25,6 +25,7 @@ function Gtodo() {
 
     const createTacheAction = () => {
         createTache(tache, date).then(res => {
+            alert("Tâche ajoutée")
             getTodoAction()
         }).catch(e => {
             alert(e)
@@ -66,37 +67,35 @@ function Gtodo() {
 
     return (
         <Container className="todo-header">
-            <Row>
-                <Col className="colonnes" lg={6} md={6} sm={6}>
-                    {data.map((todo, index) => (
-                        <ListGroup.Item key={"todo" + index}>
-                            <ControlLabel>Tâches à faire</ControlLabel>
-                            <Form.Control type="text" placeholder="Date" onChange={e => handleChangeDate(e.target.value, index)} value={todo.date} />
-                            <Form.Check type="checkbox" placeholder="Tache" onChange={e => handleChangeTache(e.target.value, index)} label={todo.tache} />
-                            <Button type="submit" onClick={() => deleteTacheAction(todo)}>Supprimer</Button>
-                        </ListGroup.Item>
-                    ))}
 
-                </Col>
+            <h3>To do list</h3>
 
-                <Col className="colonnes" lg={6} md={6} sm={6}>
-                    <Form>
-                        <h3>Ajout d'une tâche : </h3>
-                        <FormGroup>
-                            <ControlLabel>Date</ControlLabel>
-                            <Form.Control type="text" placeholder="YYYY-MM-DD" onChange={e => setDate(e.target.date)} value={date} />
-                        </FormGroup>
+                {data.map((todo, index) => (
+                    <ListGroup.Item key={"todo" + index}>
+                        <Form.Control type="text" placeholder="Date" onChange={e => handleChangeDate(e.target.value, index)} value={todo.date} />
+                        <Form.Check type="checkbox" placeholder="Tache" onChange={e => handleChangeTache(e.target.value, index)} label={todo.tache} value={todo.tache} />
+                        <Button type="submit" onClick={() => updateTodoAction(todo)}>Mettre à jour</Button>
+                        <Button type="submit" onClick={() => deleteTacheAction(todo)}>Supprimer</Button>
+                    </ListGroup.Item>
+                ))}
 
-                        <FormGroup>
-                            <ControlLabel>A faire</ControlLabel>
-                            <FormControl type="text" placeholder="tache" onChange={e => setTache(e.target.tache)} value={tache} />
-                        </FormGroup>
+                <Form>
 
-                        <Button type="submit" onClick={() => createTacheAction}>Ajouter</Button>
-                    </Form>
+                    <ControlLabel><b>Ajout d'une tâche :</b></ControlLabel>
 
-                </Col>
-            </Row>
+                    <FormGroup>
+                        <ControlLabel>Date</ControlLabel>
+                        <Form.Control type="text" placeholder="YYYY-MM-DD" onChange={e => setDate(e.target.date)} value={date} />
+                    </FormGroup>
+
+                    <FormGroup>
+                        <ControlLabel>A faire</ControlLabel>
+                        <FormControl type="text" placeholder="tache" onChange={e => setTache(e.target.tache)} value={tache} />
+                    </FormGroup>
+
+                    <Button variant="primary" type="button" onClick={createTacheAction}>Ajouter</Button>
+                </Form>
+
         </Container>
 
     )

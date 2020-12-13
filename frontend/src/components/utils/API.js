@@ -44,11 +44,20 @@ export const updateTodo = (todo) => {
 
 //afficher les meetings
 export const getMeet = () => {
-    return axios.get(URL + "/meeting")
+    return axios.get(URL + '/meeting')
 }
 
-/*formulaire
+//supprimer un meeting
+export const deleteMeet = (meetID) => {
+    return axios.delete(URL + '/meeting/' + meetID )
+}
+
 //ajout meeting
-export const createMeet = () => {
-    return axios.post(URL + "/meeting", {heure, tache})
-}*/
+export const createMeet = (heure, tache) => {
+    return axios.post(URL + '/meeting', {heure, tache})
+}
+
+//mise à jour meetings
+export const updateMeet = (meets) => {
+    return axios.put(URL + '/meeting/' + meets._id, meets)
+}

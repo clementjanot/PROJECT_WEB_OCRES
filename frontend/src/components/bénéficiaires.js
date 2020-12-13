@@ -25,6 +25,7 @@ function Gbenef() {
 
     const createBenefAction = () => {
         createBenef(nom, IBAN).then(res => {
+            alert("Bénéficiaire ajouté")
             getBenefAction()
         }).catch(e => {
             alert(e)
@@ -67,13 +68,14 @@ function Gbenef() {
     return (
 
         <header className="contacts-header">
+            <h3>Bénéficiaires</h3>
             <Row>
                 <Col className="colonnes" lg={6} md={6} sm={6}>
                     {data.map((benef, index) => (
                         <ListGroup.Item key={"benef" + index}>
                             <Form>
                                 <Form.Group >
-                                    <ControlLabel>Noms</ControlLabel>
+                                    <ControlLabel>Nom</ControlLabel>
                                     <Form.Control type="text" placeholder="Nom" onChange={e => handleChangeNom(e.target.value, index)} value={benef.nom} />
                                 </Form.Group>
 
@@ -93,7 +95,7 @@ function Gbenef() {
                 <Col className="colonnes" lg={6} md={6} sm={6}>
 
                     <Form>
-                        <h3>Ajout de bénéficiaire : </h3>
+                        <ControlLabel><b>Ajout de bénéficiaire : </b></ControlLabel>
 
                         <FormGroup>
                             <ControlLabel>Nom du bénéficiaire</ControlLabel>

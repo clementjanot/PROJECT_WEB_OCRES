@@ -1,0 +1,27 @@
+.signup {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    text-align: center;
+    display: inline-block;
+    background-color: rgba(245, 190, 204, 0.85);
+    border: 1px solid rgba(242, 126, 157, 0.85);
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+  .signup button[type=submit] {
+    width: 50%;
+    background-color: #1C4AA6;
+    color: white;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 10px 50px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .signup button[type=submit]:hover {
+    background-color: #F24472;
+  }

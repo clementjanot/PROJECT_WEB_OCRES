@@ -2,17 +2,8 @@
     text-align: center;
     color: black;
   }
-/*.todo-header p {
-  font-size: 0.75em;
-  color: black;
-}*/
 
-.colonnes h3 {
-  font-size: 1em;
-  color: black;
-}
-
-.colonnes button[type=submit] {
+.todo-header button[type=submit] {
   width: 50%;
   background-color: #1C4AA6;
   color: white;
@@ -24,7 +15,7 @@
   border-radius: 15px;
   cursor: pointer;
 }
-.colonnes button[type=submit]:hover {
+.todo-header button[type=submit]:hover {
   background-color: #F24472;
 }
 
