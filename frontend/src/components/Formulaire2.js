@@ -54,7 +54,7 @@ class Signup extends React.Component {
           <div>
             <div className="form-group">
               <label>email : </label>
-              <input type="text"  value={this.state.email} onChange={this.onChangeEmail}/>
+              <input type="email"  value={this.state.email} onChange={this.onChangeEmail}/>
             </div>
             <div className="form-group">
               <label>password : </label>
