@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './todo.css';
 import { getTodo, createTache, deleteTache, updateTodo } from './utils/API';
 
-import { Row, Col, Container, Button, ListGroup, FormGroup, FormControl, Form } from 'react-bootstrap';
+import { Container, Button, ListGroup, FormCheck, FormControl, Form } from 'react-bootstrap';
 import { ControlLabel } from 'rsuite';
 
 function Gtodo() {
@@ -72,28 +72,27 @@ function Gtodo() {
 
                 {data.map((todo, index) => (
                     <ListGroup.Item key={"todo" + index}>
-                        <Form.Control type="text" placeholder="Date" onChange={e => handleChangeDate(e.target.value, index)} value={todo.date} />
-                        <Form.Check type="checkbox" placeholder="Tache" onChange={e => handleChangeTache(e.target.value, index)} label={todo.tache} value={todo.tache} />
+                        <FormControl type="text" placeholder="Date" onChange={e => handleChangeDate(e.target.value, index)} value={todo.date} />
+                        <FormCheck type="checkbox" placeholder="Tache" onChange={e => handleChangeTache(e.target.value, index)} label={todo.tache} value={todo.tache} />
                         <Button type="submit" onClick={() => updateTodoAction(todo)}>Mettre à jour</Button>
                         <Button type="submit" onClick={() => deleteTacheAction(todo)}>Supprimer</Button>
                     </ListGroup.Item>
                 ))}
 
+
                 <Form>
 
                     <ControlLabel><b>Ajout d'une tâche :</b></ControlLabel>
 
-                    <FormGroup>
-                        <ControlLabel>Date</ControlLabel>
-                        <Form.Control type="text" placeholder="YYYY-MM-DD" onChange={e => setDate(e.target.date)} value={date} />
-                    </FormGroup>
+                    <Form.Group>
+                        <Form.Control type="date" onChange={e => setDate(e.target.value)} value={date} />
+                    </Form.Group>
 
-                    <FormGroup>
-                        <ControlLabel>A faire</ControlLabel>
-                        <FormControl type="text" placeholder="tache" onChange={e => setTache(e.target.tache)} value={tache} />
-                    </FormGroup>
+                    <Form.Group>
+                        <FormControl type="text" placeholder="tâche à faire" onChange={e => setTache(e.target.value)} value={tache}/>
+                    </Form.Group>
 
-                    <Button variant="primary" type="button" onClick={createTacheAction}>Ajouter</Button>
+                    <Button variant="primary" type="submit" onClick={createTacheAction}>Ajouter</Button>
                 </Form>
 
         </Container>

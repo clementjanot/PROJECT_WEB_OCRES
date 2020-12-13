@@ -99,15 +99,15 @@ function Gbenef() {
 
                         <FormGroup>
                             <ControlLabel>Nom du bénéficiaire</ControlLabel>
-                            <Form.Control type="text" placeholder="Nom" onChange={e => setNom(e.target.nom)} value={nom} />
+                            <Form.Control type="text" placeholder="Nom" onChange={e => setNom(e.target.value)} value={nom} />
                         </FormGroup>
 
                         <FormGroup>
                             <ControlLabel>IBAN</ControlLabel>
-                            <FormControl type="text" placeholder="IBAN" onChange={e => setIBAN(e.target.IBAN)} value={IBAN} />
+                            <FormControl type="text" placeholder="IBAN" onChange={e => setIBAN(e.target.value)} value={IBAN} />
                         </FormGroup>
 
-                        <Button type="submit" onClick={() => createBenefAction}>Ajouter</Button>
+                        <Button variant="primary" type="submit" onClick={createBenefAction}>Ajouter</Button>
                     </Form>
 
                 </Col>

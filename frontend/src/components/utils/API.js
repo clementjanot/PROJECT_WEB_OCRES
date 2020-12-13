@@ -29,7 +29,7 @@ export const getTodo = () => {
 
 //ajout d'une tache
 export const createTache = (tache, date) => {
-    return axios.post(URL + '/todo', {tache, date})
+    return axios.post(URL + "/todo", {tache, date})
 }
 
 //supprimer une tache

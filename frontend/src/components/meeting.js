@@ -3,7 +3,7 @@ import './meeting.css';
 
 import { getMeet, deleteMeet, createMeet, updateMeet } from './utils/API';
 
-import { Row, Col, Container, Button, ListGroup, FormGroup, FormControl, Form } from 'react-bootstrap';
+import { Button, ListGroup, FormGroup, FormControl, Form } from 'react-bootstrap';
 import { ControlLabel } from 'rsuite';
 
 function Gmeeting() {
@@ -86,16 +86,14 @@ function Gmeeting() {
                 <ControlLabel><b>Ajout d'un meeting :</b></ControlLabel>
 
                 <FormGroup>
-                    <ControlLabel>Heure</ControlLabel>
-                    <Form.Control type="text" placeholder="YYYY-MM-DD" onChange={e => setHeure(e.target.heure)} value={heure} />
+                    <Form.Control type="date" onChange={e => setHeure(e.target.value)} value={heure} />
                 </FormGroup>
 
                 <FormGroup>
-                    <ControlLabel>infos rdv</ControlLabel>
-                    <FormControl type="text" placeholder="tache" onChange={e => setTache(e.target.tache)} value={tache} />
+                    <FormControl type="text" placeholder="information du rdv" onChange={e => setTache(e.target.value)} value={tache} />
                 </FormGroup>
 
-                <Button type="submit" onClick={() => createMeetAction}>Ajouter</Button>
+                <Button variant="primary" type="submit" onClick={createMeetAction}>Ajouter</Button>
             </Form>
         </div>
 
