@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { PieChart, Pie, Sector } from 'recharts';
 import ReactApexChart from "react-apexcharts";
+import axios from 'axios'
 
 
 class ApexChart extends Component {
@@ -8,15 +8,14 @@ class ApexChart extends Component {
     super(props);
 
     this.state = {
-    
-      //series: [21, 16, 4, 9, 13,5],
-      /*options: {
+    test:[1],
+      options: {
         chart: {
           width: 280,
 
           type: 'pie',
         },
-        labels: ['Logement', 'Alimentation', 'Banque', 'Transports', 'Loisirs'],
+        labels: ['1','1','1'],
         responsive: [{
           breakpoint: 480,
           options: {
@@ -28,10 +27,32 @@ class ApexChart extends Component {
             }
           }
         }]
-      },*/
-    
-    
+      },
     };
+  }
+
+  async componentDidMount(){
+
+    try{
+    await axios.get('http://localhost:3002/categoriesDepenses/5fd63b29951d210ef89bbd3d')
+      .then(async response =>{
+        const data1 = await response.data;
+        this.setState({
+          labels: data1.options.labels,
+          test: data1.series,
+
+        })
+        console.log(data1.options.labels);
+      
+      })
+      .catch((error)=>{
+        console.log(error);
+      })
+    }
+      catch(err){
+        console.log(err)
+      }
+
   }
 
 
@@ -41,7 +62,9 @@ class ApexChart extends Component {
       
 
 <div id="chart">
-<ReactApexChart options={this.props.budgetDep.options} series={this.props.budgetDep.series} type="pie" width={280}  />
+{this.state.labels}
+{this.state.test}
+<ReactApexChart options={this.state.options} series={this.state.test} type="pie" width={280}  />
 </div>
 
 

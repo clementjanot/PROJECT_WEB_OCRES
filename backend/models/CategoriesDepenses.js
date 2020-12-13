@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const categoriesDepensesSchema = mongoose.Schema({
     depenses: { type: Number, required: true },
     series:{type: Array, required: true},
-    option : 
+    options : 
         {
             chart :{
                     width : { type: Number, required: true },
@@ -13,7 +13,7 @@ const categoriesDepensesSchema = mongoose.Schema({
             labels:{type: Array, required: true}, 
             responsive :{
                 breakpoint : { type: Number, required: true },
-                option : {
+                options : {
                     chart :{
                         width : { type: Number, required: true },
                     },
