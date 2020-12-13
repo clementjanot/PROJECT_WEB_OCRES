@@ -15,7 +15,7 @@ class ApexChart extends Component {
 
           type: 'pie',
         },
-        labels: ['1','1','1'],
+        labels: ['voi','lo','im'],
         responsive: [{
           breakpoint: 480,
           options: {

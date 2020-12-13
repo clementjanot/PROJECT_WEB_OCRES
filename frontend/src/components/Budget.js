@@ -21,7 +21,7 @@ class Budget extends React.Component {
             
                 <div className="budget-header">
                     <Intitule name={this.state.nameWidget}/>
-                    <p>Detail des {this.props.budgetDep.depenses} € de depenses</p>
+                    <p>Detail des // € de depenses</p>
                         <Camembert budgetDep={this.props.budgetDep}/>
                 </div>  
             

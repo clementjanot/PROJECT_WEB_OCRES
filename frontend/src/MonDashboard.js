@@ -22,22 +22,22 @@ class MDashboard extends React.Component{
         <Row>
           <Col lg={8} md={12} sm={12} >
             <Row>
-              <Col className="ConteneurDepenses"><DepensesParJour profil={this.props.data.profil} jour={this.props.data.depensesParJour}/></Col>
+              <Col className="ConteneurDepenses"><DepensesParJour/></Col>
             </Row>
             <Row>
-              <Col className="ConteneurBudgetSem"><BudgetSemaine depenses={this.props.data.budgetSemaine}/></Col>
-              <Col className="ConteneurBudget"><Budget budgetDep={this.props.data.detailsDepenses}/></Col>
+              <Col className="ConteneurBudgetSem"><BudgetSemaine/></Col>
+              <Col className="ConteneurBudget"><Budget/></Col>
             </Row>
             <Row>
-              <Col className="ConteneurBeneficairest" ><Beneficiaires bene={this.props.data.beneficiaires}/></Col>
+              <Col className="ConteneurBeneficairest" ><Beneficiaires/></Col>
             </Row>
           </Col>
           <Col className = "conteneurs" lg={4} md={12} sm={12} xs={12}>
             <Row>
-              <Col className = "conteneurMeeting"><Meeting RDV={this.props.data.meeting} /></Col>
+              <Col className = "conteneurMeeting"><Meeting/></Col>
             </Row>
             <Row>
-              <Col className = "conteneurTodo"><ToDo liste={this.props.data.todo}/></Col>
+              <Col className = "conteneurTodo"><ToDo/></Col>
             </Row>
             <Row>
               <Col className = "conteneurCalen"><Calendrier/></Col>

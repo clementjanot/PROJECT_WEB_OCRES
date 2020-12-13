@@ -50,8 +50,8 @@ export default class Example extends PureComponent {
             
             <div className = "div-client">
               <div>
-                <h4>Salut {this.props.profil.prenom},</h4>
-                <p>Ton nouveau solde est de <b>{this.state.nouveauSolde} €</b>. </p>
+                <h4>Salut //,</h4>
+                <p>Ton nouveau solde est de <b>// €</b>. </p>
               </div>
 
               <div className="graph">
