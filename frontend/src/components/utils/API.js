@@ -29,7 +29,7 @@ export const getTodo = () => {
 
 //ajout d'une tache
 export const createTache = (tache, date) => {
-    return axios.post(URL + '/todo', {tache, date})
+    return axios.post(URL + "/todo", {tache, date})
 }
 
 //supprimer une tache
@@ -54,7 +54,7 @@ export const deleteMeet = (meetID) => {
 
 //ajout meeting
 export const createMeet = (heure, tache) => {
-    return axios.post(URL + '/meeting', {heure, tache})
+    return axios.post(URL + "/meeting", {heure, tache})
 }
 
 //mise à jour meetings

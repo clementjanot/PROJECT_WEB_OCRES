@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './bénéficiaires.css';
 import { getBenef, createBenef, deleteBenef, updateBenef } from './utils/API';
 
-import { Button, FormGroup, FormControl, Form, Row, Col, ListGroup } from "react-bootstrap";
+import { Button, FormGroup, FormControl, Form, Row, Col } from "react-bootstrap";
 import { ControlLabel } from 'rsuite';
 
 function Gbenef() {
@@ -50,45 +50,47 @@ function Gbenef() {
     }
 
     const handleChangeNom = (nom, index) => {
-        // on crée une copie du state data
+        // création d'une copie state data
         let newData = [...data];
         newData[index].nom = nom
-        // on met à jour le state data
+        // maj state data
         setData(newData)
     }
 
     const handleChangeIBAN = (IBAN, index) => {
-        // on crée une copie du state data
+        // création d'une copie state data
         let newData = [...data];
         newData[index].IBAN = IBAN
-        // on met à jour le state data
+        // maj state data
         setData(newData)
     }
 
     return (
-
         <header className="contacts-header">
-            <h3>Bénéficiaires</h3>
-            <Row>
-                <Col className="colonnes" lg={6} md={6} sm={6}>
-                    {data.map((benef, index) => (
-                        <ListGroup.Item key={"benef" + index}>
-                            <Form>
-                                <Form.Group >
-                                    <ControlLabel>Nom</ControlLabel>
-                                    <Form.Control type="text" placeholder="Nom" onChange={e => handleChangeNom(e.target.value, index)} value={benef.nom} />
-                                </Form.Group>
 
-                                <Form.Group >
+            <h3>Bénéficiaires</h3>
+
+            <Row>
+
+                <Col className="colonnes" lg={6} md={6} sm={6}>
+
+                    {data.map((benef, index) => (
+                        <Form>
+                            <Form>
+                                <FormGroup >
+                                    <ControlLabel>Nom</ControlLabel>
+                                    <FormControl type="text" placeholder="Nom" onChange={e => handleChangeNom(e.target.value, index)} value={benef.nom} />
+                                </FormGroup>
+
+                                <FormGroup >
                                     <ControlLabel>IBAN</ControlLabel>
                                     <Form.Control type="text" placeholder="IBAN" onChange={e => handleChangeIBAN(e.target.value, index)} value={benef.IBAN} />
-                                </Form.Group>
+                                </FormGroup>
                             </Form>
 
                             <Button type="submit" onClick={() => updateBenefAction(benef)}>Mettre à jour</Button>
                             <Button type="submit" onClick={() => deleteBenefAction(benef)}>Supprimer</Button>
-
-                        </ListGroup.Item>
+                        </Form>
                     ))}
                 </Col>
 
@@ -98,21 +100,19 @@ function Gbenef() {
                         <ControlLabel><b>Ajout de bénéficiaire : </b></ControlLabel>
 
                         <FormGroup>
-                            <ControlLabel>Nom du bénéficiaire</ControlLabel>
-                            <Form.Control type="text" placeholder="Nom" onChange={e => setNom(e.target.nom)} value={nom} />
+                            <FormControl type="text" placeholder="Nom" onChange={e => setNom(e.target.value)} value={nom} />
                         </FormGroup>
 
                         <FormGroup>
-                            <ControlLabel>IBAN</ControlLabel>
-                            <FormControl type="text" placeholder="IBAN" onChange={e => setIBAN(e.target.IBAN)} value={IBAN} />
+                            <FormControl type="text" placeholder="IBAN" onChange={e => setIBAN(e.target.value)} value={IBAN} />
                         </FormGroup>
 
-                        <Button type="submit" onClick={() => createBenefAction}>Ajouter</Button>
+                        <Button type="submit" onClick={createBenefAction}>Ajouter</Button>
                     </Form>
 
                 </Col>
             </Row>
         </header>
-
     )
+
 } export default Gbenef;
