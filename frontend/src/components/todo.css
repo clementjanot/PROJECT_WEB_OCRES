@@ -2,18 +2,30 @@
     text-align: center;
     color: black;
   }
-.todo-header p {
+/*.todo-header p {
   font-size: 0.75em;
   color: black;
-}
+}*/
 
 .colonnes h3 {
   font-size: 1em;
   color: black;
 }
-  
-.box {
-  width: 120px;
+
+.colonnes button[type=submit] {
+  width: 50%;
+  background-color: #1C4AA6;
+  color: white;
+  font-size: 0.75em;
+  text-align: center;
+  padding: 10px 50px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.colonnes button[type=submit]:hover {
+  background-color: #F24472;
 }
 
 @media only screen and (min-width: 71.25em){
