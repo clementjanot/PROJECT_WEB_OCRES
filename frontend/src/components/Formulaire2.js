@@ -48,17 +48,17 @@ class Signup extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="signup">
         <h3>Signup</h3>
         <form onSubmit={this.onSubmit}>
           <div>
             <div className="form-group">
               <label>email : </label>
-              <input type="email"  value={this.state.email} onChange={this.onChangeEmail}/>
+              <input type="email" className="form-control" value={this.state.email} onChange={this.onChangeEmail}/>
             </div>
             <div className="form-group">
               <label>password : </label>
-              <input type="password"  value={this.state.password} onChange={this.onChangePassword}/>
+              <input type="password"  value={this.state.password} className="form-control" onChange={this.onChangePassword}/>
             </div>
             <div className="form-group">
               <input type="submit" className="btn btn-primary" value="create user"/>

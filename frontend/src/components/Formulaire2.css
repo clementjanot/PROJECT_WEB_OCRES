@@ -10,7 +10,7 @@
     box-sizing: border-box;
   }
   
-  .signup button[type=submit] {
+  .signup input[type=submit] {
     width: 50%;
     background-color: #1C4AA6;
     color: white;
@@ -22,6 +22,7 @@
     border-radius: 15px;
     cursor: pointer;
   }
-  .signup button[type=submit]:hover {
+  .signup input[type=submit]:hover {
     background-color: #F24472;
   }
+  
