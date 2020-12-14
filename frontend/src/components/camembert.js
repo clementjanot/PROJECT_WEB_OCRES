@@ -62,8 +62,7 @@ class ApexChart extends Component {
       
 
 <div id="chart">
-{this.state.labels}
-{this.state.test}
+
 <ReactApexChart options={this.state.options} series={this.state.test} type="pie" width={280}  />
 </div>
 

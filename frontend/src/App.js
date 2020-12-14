@@ -12,19 +12,25 @@ import BarreDeNav from './components/Navigation';
 class App extends Component{
   constructor(props){
     super(props);
-    this.state={}
+    this.state={
+     
+      }
+    
   }
   render (){
   return (
      <div className="col-12">
        <BrowserRouter>
         <div className="Placement">
+         
           <BarreDeNav />
+          
             <Switch>
-             <Route exact path="/" component={Dashbb} />
+             <Route exact path="/" component={Dashbb}/>
              <Route path="/Formulaire" component={Formulaire}/>
-             <Route path="/Formulaire2" component={Formulaire2} />
-           </Switch> 
+             <Route path="/Formulaire2" component={Formulaire2}/>
+           </Switch>
+           
         </div> 
       </BrowserRouter>
      </div>

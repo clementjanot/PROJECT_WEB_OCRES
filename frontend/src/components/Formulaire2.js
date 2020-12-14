@@ -1,8 +1,5 @@
-import React, {Component}from "react";
+import React from "react";
 import './Formulaire2.css';
-import { Button, FormGroup, FormControl } from "react-bootstrap";
-
-import { ControlLabel } from 'rsuite';
 import axios from 'axios';
 
 class Signup extends React.Component {

@@ -2,12 +2,9 @@ import React from 'react';
 import './budgetSemaine.css';
 import Intitule from './Intitule';
 
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Camembert2 from './camembert2'
 import axios from 'axios'
 
-import {Input, InputGroup, Icon} from 'rsuite';
 
 class BudgetSemaine extends React.Component {
     constructor(props) {

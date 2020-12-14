@@ -4,6 +4,7 @@ import './Intitule.css';
 export default class Intitule extends React.PureComponent {
     constructor (props){
         super(props);
+        this.state = {}
     }
 
     render(){

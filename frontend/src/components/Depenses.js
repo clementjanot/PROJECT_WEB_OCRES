@@ -50,8 +50,8 @@ export default class Example extends PureComponent {
             
             <div className = "div-client">
               <div>
-                <h4>Salut //,</h4>
-                <p>Ton nouveau solde est de <b>// €</b>. </p>
+                <h4>Salut Amandine,</h4>
+                <p>Ton nouveau solde est de <b>1000 €</b>. </p>
               </div>
 
               <div className="graph">

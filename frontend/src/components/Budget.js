@@ -2,7 +2,6 @@ import React from 'react';
 import './Budget.css';
 import Intitule from './Intitule';
 import Camembert from './camembert';
-import Row from 'react-bootstrap/esm/Row';
 
 
 class Budget extends React.Component {
@@ -21,7 +20,7 @@ class Budget extends React.Component {
             
                 <div className="budget-header">
                     <Intitule name={this.state.nameWidget}/>
-                    <p>Detail des // € de depenses</p>
+                    <p>Detail des 70 € de depenses</p>
                         <Camembert budgetDep={this.props.budgetDep}/>
                 </div>  
             

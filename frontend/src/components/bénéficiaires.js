@@ -100,7 +100,7 @@ function Gbenef() {
                         <ControlLabel><b>Ajout de bénéficiaire : </b></ControlLabel>
 
                         <FormGroup>
-                            <FormControl type="text" placeholder="Nom" onChange={e => setNom(e.target.value)} value={nom} />
+                            <FormControl type="text" placeholder="Nom" onChange={e => setNom(e.target.value)} value={nom}></FormControl>
                         </FormGroup>
 
                         <FormGroup>
